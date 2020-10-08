@@ -58,7 +58,7 @@
 }
 
 .searchBox:hover > .searchInput {
-    width: 300px;
+    width: 350px;
     padding: 0 6px;
 }
 
@@ -98,13 +98,124 @@
 .championBar a {
     float: left;
     display: block;
-    text-align: center;
-    padding: 10px;
+    padding-top: 3px;
+    padding-left: 35px;
     transition: all 0.3s ease;
-    color: white;
-    font-size: 10px;
 }
 
-.championBar a:hover{
+.championBar b, g {
+    float: left;
+    display: block;
+    text-align: center;
+    padding-top: 3px;
+    padding-left: 40px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+
+.winrate {
+    color: green;
+}
+
+.pickrate {
+    color: yellow;
+}
+
+.bandrate {
+    color: red;
+}
+
+.championBar a:hover {
     color: #000;
+}
+
+.championBar b:hover {
+    color: blue;
+}
+
+/*represented by icon later*/
+.dot {
+    height: 30px;
+    width: 30px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.championBar .dot:hover{
+    background-color: #000;
+}
+
+.seperator {
+    border-left: 2px solid #bbb;
+    height: 30px;
+    position: absolute;
+    left: 34%;
+}
+
+/*--------------- Square Box Table ---------------*/
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color:#bbb;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 120px;
+    padding: 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin-top: 20px;
+    margin-left:11%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 1000px) {
+.column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+}
+
+.text{
+    margin-top: 10px;
+    text-align:left;
+    color: white;
+}
+
+/*--------------- Square Box Table ---------------*/
+
+.title {
+    color: red;
+    font-size: 20px;
+}
+
+.footertext {
+    float: left;
+    padding-left: 5px;
+}
+
+.dot2 {
+    height: 30px;
+    width: 30px;
+    float:right;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+.gap {
+    margin-top:5px;
 }
