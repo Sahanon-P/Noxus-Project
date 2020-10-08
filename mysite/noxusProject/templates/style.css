@@ -1,0 +1,110 @@
+/*--------------- Menu Bar ---------------*/
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+  
+.topnav a {
+    float: right;
+    color: #bfbfbf;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav b {
+    float: left;
+    color: #ff0000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+  
+.topnav a:hover {
+    background-color: #111;
+}
+  
+/*--------------- League of Legend Box ---------------*/
+
+#block1 {
+    border-radius: 25px;
+    background:#333;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%;
+    height: 100px;
+  
+    text-align: center;
+    color:#a6a6a6;
+    font-size:70px; 
+}
+
+/*--------------- Search Bar ---------------*/
+
+.searchBox {
+    position: absolute;
+    top: 160px;
+    left: 10%;
+    transform:  translate(0%,100%);
+    background:#a6a6a6;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 300px;
+    padding: 0 6px;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 130px;
+
+}
+
+@media screen and (max-width: 720px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+/*--------------- Champion Menu Bar ---------------*/
+
+.championBar {
+    border-radius: 25px;
+    background:#333;
+    padding: 20px;
+    margin-top: 90px;
+    margin-left: 10%;
+    width: 80%;
+    height: 30px;
+}
+
+.championBar a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 10px;
+}
+
+.championBar a:hover{
+    color: #000;
+}
