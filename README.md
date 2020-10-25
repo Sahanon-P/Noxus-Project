@@ -1,27 +1,100 @@
 # Noxus-Project
 ## League’s Insights
 
--- ***By my hand will NOXUS rise*** --
-<details>
-  <summary> Description </summary>
-           <p>   - A web-application providing analytical insights of the game “League of Legends” such as win rates, most played builds and most used characters presented in a way of data visualization to make users be able easily understand the complex in-game data and utilize the information they gained to make somewhat beneficial decisions in their gameplays whether they be pro-players or beginners.
+![Noxus](darius-god-king.jpg)
+
+   -- ***By my hand will NOXUS rise*** --
+
+## Description 
+             
+   - A web-application providing analytical insights of the game “League of Legends” such as win rates, most played builds and most used characters presented in a way of data visualization to make users be able easily understand the complex in-game data and utilize the information they gained to make somewhat beneficial decisions in their gameplays whether they be pro-players or beginners.
 Signing in is not necessary to view our website, unless the user wants to subscribe and receive news about our latest updates. If so, they can sign up or subscribe with their email to help us grow our lovely league of legends community.
-</p>
-</details>
+
+## Development Plan
 
 <details>
-  <summary> Background </summary>
-  <p>
-  - We came across many project ideas while brainstorming, but this one caught our attention the most. The league of legends contains many of the information such as runes, items, skill order that will be determined by the champion you select and it’s over 9,000!!! hundreds of champions that you can choose and we only have a short period of time to deal with every stuff above.
-As you can see it will be hard for new players as well as the intermediate ones. Our goal is to make a website that provides a quick guide for the combination of everythings that we have mentioned.
-Websites such as OP.GG or Mobalytics have very in-depth information about the games, but we think it is too advanced for most casual players and new players to keep up with the vast amount of information they provide in the short time period while we play the game itself.
-Note: We as players mostly multi-task between gathering data and playing the game at the same time, so it would be excellent if the data visualization is easily understandable and responsive to quickly provide the information we need.
-This project will increase our experience to do other projects in the future. Beside this project can gain some profit from advertising, Being an official web base model, If our project deployed successfully. It will solve the problem for newbies that do not know about the league of legend that causes good game experience. We also have a donation feature for users to support us for next web development in the future.
+  <summary> ITERATION 1 </summary>
+  <p> 
 
-   When we try to find information about this game while playing it, the websites we found aren't easy to understand at first glance. It took time studying what the numbers on their pages meant, and that’s what we think could be the actual reason why many players do not know what to do in the game and eventually cause their team to collapse most of the time, so we decided to make a greater application that would represent the data they needed as simple as possible but still contains most of the valuable information for their gameplay. 
+#### PRIORITY
+1. Proposal [Single mode + Review]
+2. Wiki [Single player]
+3. Project Task board [Single player]
+4. index.html [1-2 player]
+	- Contact us [Single mode]
+	- Blank champion page [Single mode]
+5. CSS stylesheet[Co-op]
+6. Server[Deploy]
+
+#### GOAL
+1. Create Homepage and Contact us.
+2. Manage Wiki and Readme.
+
+#### FEATURES
+1. Home page.
+2. Contact Us page.
+
+#### ACCEPTANCE CRITERIA
+1. Home page working and stable.
+2. Wiki look good and easy to read.
+
 </p>
-</details>
+  </details>
 
+<details>
+  <summary> ITERATION 2 </summary>
+  <p> 
+
+#### PRIORITY
+1. Find data sources
+2. Mine data
+3. Search bar function
+4. Github page availability
+5. Improves Home page
+
+#### GOAL
+1. Readable champions data.
+2. Search bar.
+3. Improved Home page.
+
+#### FEATURES
+1. json data.
+2. Search function
+
+#### ACCEPTANCE CRITERIA
+1. Available data for next iteration.
+
+</p>
+  </details>
+
+<details>
+  <summary> ITERATION 3 </summary>
+  <p> 
+
+#### PRIORITY
+1. Models Planning
+2. Champion Class
+3. Contact us Page
+4. User experience report.
+5. GUI improvement according to UX.
+
+#### GOAL
+1. Contact us Page.
+2. Improves designs of GUI.
+3. Viable Models for database.
+
+#### FEATURES
+1. Contact_us.html
+
+#### ACCEPTANCE CRITERIA
+1. Working Contact us Page.
+2. Possibly improved GUI.
+3. Finished Models class.
+
+</p>
+  </details>
+
+  
 
 
   
