@@ -1,0 +1,71 @@
+  
+/*--------------- Menu Bar ---------------*/
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    float: right;
+    color: #bfbfbf;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav b {
+    float: left;
+    color: #ff0000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+  
+.topnav a:hover {
+    background-color: #111;
+}
+
+div#header {
+    height: 25vh;
+    overflow: scroll;
+  }
+/*--------------- League of Legend Box ---------------*/
+
+.championBar{
+    background:#333;
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%;
+    height: 250px;
+}
+.championBar a {
+    float: left;
+    padding-top: 40px;
+    padding-left: 35px;
+}
+
+/*Champion pic*/
+.box {
+    height: 175px;
+    width: 175px;
+    background-color: #bbb;
+    display: inline-block;
+}
+.footertext {
+    float: left;
+    padding-top: 125px;
+    padding-left: 30px;
+    font-size: 24px;
+    line-height: 10px;
+}
+.mainBox{
+    background: #333;
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%;
+    height: 1000px;
+}
+
