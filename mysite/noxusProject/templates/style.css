@@ -1,11 +1,35 @@
+body {
+    margin: 0;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-style: normal;
+    font-size: 400;
+}
+  
+footer {
+    left: 0;
+    bottom: 0;
+    background-color: #333;
+    color: #bfbfbf;
+    padding-top:20px;
+    padding-bottom:130px;
+    padding-left:20px;
+}
+
+h1 {
+    text-align: center;
+    color:red;
+    font-size: 50px;
+    font-weight: bold;
+}
+
 /*--------------- Menu Bar ---------------*/
 
-.topnav {
+.header {
     overflow: hidden;
     background-color: #333;
 }
   
-.topnav a {
+.header a {
     float: right;
     color: #bfbfbf;
     text-align: center;
@@ -14,7 +38,7 @@
     font-size: 17px;
 }
   
-.topnav b {
+.header b {
     float: left;
     color: #ff0000;
     text-align: center;
@@ -23,7 +47,7 @@
     font-size: 20px;
 }
   
-.topnav a:hover {
+.header a:hover {
     background-color: #111;
 }
   
@@ -47,13 +71,13 @@
 
 .searchBox {
     position: absolute;
-    top: 160px;
-    left: 10%;
+    left: 12.5%;
     transform:  translate(0%,100%);
     background:#a6a6a6;
-    height: 40px;
+    height: 25px;
     border-radius: 40px;
     padding: 10px;
+    margin-top: -35px;
 
 }
 
@@ -71,7 +95,7 @@
     color: white;
     font-size: 16px;
     transition: 0.4s;
-    line-height: 40px;
+    line-height: 30px;
     width: 130px;
 
 }
@@ -90,113 +114,130 @@
     background:#333;
     padding: 20px;
     margin-top: 90px;
-    margin-left: 10%;
-    width: 80%;
+    margin-left: 12.5%;
+    width: 75%;
     height: 30px;
-}
-
-.championBar a {
-    float: left;
-    display: block;
-    padding-top: 3px;
-    padding-left: 35px;
-    transition: all 0.3s ease;
-}
-
-.championBar b, g {
-    float: left;
-    display: block;
-    text-align: center;
-    padding-top: 3px;
-    padding-left: 40px;
-    transition: all 0.3s ease;
-    font-size: 20px;
-}
-
-.winrate {
-    color: green;
-}
-
-.pickrate {
-    color: yellow;
-}
-
-.bandrate {
-    color: red;
-}
-
-.championBar a:hover {
-    color: #000;
-}
-
-.championBar b:hover {
-    color: blue;
 }
 
 /*represented by icon later*/
 .dot {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
+    margin-left: 155px;
 }
 
-.championBar .dot:hover{
-    background-color: #000;
+/*top roll*/
+.top-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-top.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 155px;
 }
 
-.seperator {
-    border-left: 2px solid #bbb;
-    height: 30px;
-    position: absolute;
-    left: 34%;
+.top-icon:hover {
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-top-hover.png');
+}
+
+/*jungle roll*/
+.jungle-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-jungle.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 155px;
+}
+
+.jungle-icon:hover {
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-jungle-hover.png');
+}
+
+/*mid roll*/
+.mid-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-middle.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 155px;
+}
+
+.mid-icon:hover {
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-middle-hover.png');
+}
+
+/*adc roll*/
+.bottom-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-bottom.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 155px;
+}
+
+.bottom-icon:hover {
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-bottom-hover.png');
+}
+
+/*support roll*/
+.support-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-utility.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 155px;
+}
+
+.support-icon:hover {
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-utility-hover.png');
 }
 
 /*--------------- Square Box Table ---------------*/
+
+table {
+    width: 75%;
+    margin-top: 70px;
+    margin-left: 13.5%;
+}
+
+th {
+    text-align: center;
+    padding: 10px;
+}
 
 .box {
     height: 100px;
     width: 100px;
     background-color:#bbb;
+    margin: auto;
 }
 
-/* Float four columns side by side */
-.column {
-    float: left;
-    width: 120px;
-    padding: 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.row {
-    margin-top: 20px;
-    margin-left:11%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-content: "";
-display: table;
-clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 1000px) {
-.column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-}
+.box:hover {
+    /*add later*/
 }
 
 .text{
     margin-top: 10px;
-    text-align:left;
     color: white;
 }
 
-/*--------------- Square Box Table ---------------*/
+.text:hover {
+    /*add later*/
+}
+
+/*--------------- footer ---------------*/
 
 .title {
     color: red;
