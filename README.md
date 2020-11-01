@@ -93,6 +93,30 @@ Signing in is not necessary to view our website, unless the user wants to subscr
 
 </p>
   </details>
+  
+  <details>
+  <summary> ITERATION 3 </summary>
+  <p> 
+
+#### PRIORITY
+1. Viable Models for database.
+2. Web app model.
+
+#### GOAL
+1. Contact us Page.
+2. Home page.
+3. Viable Models for database.
+
+#### FEATURES
+1. Index.html.
+2. Contact_us.html.
+
+#### ACCEPTANCE CRITERIA
+1. Working contact us and home page.
+2. Working Model data base for web app.
+
+</p>
+  </details>
 
   
 
