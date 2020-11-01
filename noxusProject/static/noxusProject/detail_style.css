@@ -1,3 +1,4 @@
+
 /*--------------- Body, Footer ---------------*/
 
 body {
@@ -287,4 +288,8 @@ b {
     float:right;
     background-color: #bbb;
     border-radius: 50%;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> url-mapping
