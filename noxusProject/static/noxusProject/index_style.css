@@ -1,0 +1,250 @@
+/*--------------- Body, Footer ---------------*/
+
+body {
+    margin: 0;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-style: normal;
+    font-size: 400;
+}
+  
+footer {
+    left: 0;
+    bottom: 0;
+    background-color: #333;
+    color: #bfbfbf;
+    padding-top:20px;
+    padding-bottom:130px;
+    padding-left:20px;
+}
+
+h1 {
+    text-align: center;
+    color:red;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/*--------------- Menu Bar ---------------*/
+
+.header {
+    overflow: hidden;
+    background-color: #333;
+}
+  
+.header a {
+    float: right;
+    color: #bfbfbf;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.header b {
+    float: left;
+    color: #ff0000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+  
+.header a:hover {
+    background-color: #111;
+}
+  
+/*--------------- League of Legend Box ---------------*/
+
+#block1 {
+    border-radius: 25px;
+    background:#333;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%;
+    height: 100px;
+  
+    text-align: center;
+    color:#a6a6a6;
+    font-size:70px; 
+}
+
+/*--------------- Search Bar ---------------*/
+
+.searchBox {
+    position: absolute;
+    left: 12.5%;
+    transform:  translate(0%,100%);
+    background:#a6a6a6;
+    height: 25px;
+    border-radius: 40px;
+    padding: 10px;
+    margin-top: -35px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 350px;
+    padding: 0 6px;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 30px;
+    width: 130px;
+
+}
+
+@media screen and (max-width: 720px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+/*--------------- Champion Menu Bar ---------------*/
+
+.championBar {
+    border-radius: 25px;
+    background:#333;
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: 12.5%;
+    width: 75%;
+    height: 30px;
+}
+
+/*top roll*/
+.top-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-top.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 155px;
+}
+
+.top-icon:hover {
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-top-hover.png');
+}
+
+/*jungle roll*/
+.jungle-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-jungle.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 155px;
+}
+
+.jungle-icon:hover {
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-jungle-hover.png');
+}
+
+/*mid roll*/
+.mid-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-middle.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 155px;
+}
+
+.mid-icon:hover {
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-middle-hover.png');
+}
+
+/*adc roll*/
+.bottom-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-bottom.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 155px;
+}
+
+.bottom-icon:hover {
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-bottom-hover.png');
+}
+
+/*support roll*/
+.support-icon {
+    height: 35px;
+    width: 35px;
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-utility.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 155px;
+}
+
+.support-icon:hover {
+    background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-utility-hover.png');
+}
+
+/*--------------- Square Box Table ---------------*/
+
+table {
+    width: 75%;
+    margin-top: 50px;
+    margin-left: 13.5%;
+}
+
+th {
+    text-align: center;
+    padding: 10px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    margin: auto;
+}
+
+.box:hover {
+    /*add later*/
+}
+
+.text{
+    margin-top: 10px;
+    color: white;
+}
+
+.text:hover {
+    /*add later*/
+}
+
+/*--------------- footer ---------------*/
+
+.title {
+    color: red;
+    font-size: 20px;
+}
+
+.footertext {
+    float: left;
+    padding-left: 5px;
+}
+
+.dot2 {
+    height: 30px;
+    width: 30px;
+    float:right;
+    background-color: #bbb;
+    border-radius: 50%;
+}
