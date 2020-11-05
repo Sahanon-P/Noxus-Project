@@ -118,6 +118,30 @@ Signing in is not necessary to view our website, unless the user wants to subscr
 </p>
   </details>
 
+<details>
+  <summary> ITERATION 5 </summary>
+  <p> 
+
+#### PRIORITY
+1. Continue database models.
+2. Merging all page together. 
+3. Admin logging.
+
+#### GOAL
+1. Merging all page.
+2. Viable Models for database.
+
+#### FEATURES
+none
+
+#### ACCEPTANCE CRITERIA
+1. Working Web application.
+2. Working admin page.
+3. Working admin logging
+4. Finished Models class.
+
+  </p>
+</details>
   
 
 
