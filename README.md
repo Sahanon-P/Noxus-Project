@@ -132,7 +132,7 @@ Signing in is not necessary to view our website, unless the user wants to subscr
 2. Viable Models for database.
 
 #### FEATURES
-none
+1. Admin login
 
 #### ACCEPTANCE CRITERIA
 1. Working Web application.
