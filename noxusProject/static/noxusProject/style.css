@@ -1,221 +1,122 @@
-/*--------------- Menu Bar ---------------*/
-
-.topnav {
-    overflow: hidden;
-    background-color: #333;
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
 }
-  
-.topnav a {
-    float: right;
-    color: #bfbfbf;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
+body{
+  height: 100vh;
+  width: 100%;
+  /* background: linear-gradient(115deg, #000000 10%, #39cbf0 90%); */
+  background: #4B4B4C;
 }
-  
-.topnav b {
-    float: left;
-    color: #ff0000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
+.show-btn{
+  background: rgb(0, 0, 0);
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-  
-.topnav a:hover {
-    background-color: #111;
+.show-btn, .container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-  
-/*--------------- League of Legend Box ---------------*/
-
-#block1 {
-    border-radius: 25px;
-    background:#333;
-    padding: 15px;
-    margin-top: 20px;
-    margin-left: 10%;
-    width: 80%;
-    height: 100px;
-  
-    text-align: center;
-    color:#a6a6a6;
-    font-size:70px; 
+input[type="checkbox"]{
+  display: none;
 }
-
-/*--------------- Search Bar ---------------*/
-
-.searchBox {
-    position: absolute;
-    top: 160px;
-    left: 10%;
-    transform:  translate(0%,100%);
-    background:#a6a6a6;
-    height: 40px;
-    border-radius: 40px;
-    padding: 10px;
-
+.container{
+  display: none;
+  background: #fff;
+  width: 410px;
+  height: 420px;
+  padding: 30px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
-
-.searchBox:hover > .searchInput {
-    width: 350px;
-    padding: 0 6px;
+#show:checked ~  .container{
+  display: block;
 }
-
-.searchInput {
-    border:none;
-    background: none;
-    outline:none;
-    float:left;
-    padding: 0;
-    color: white;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 130px;
-
+.container .close-btn{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 17px;
+  cursor: pointer;
 }
-
-@media screen and (max-width: 720px) {
-.searchBox:hover > .searchInput {
-    width: 150px;
-    padding: 0 6px;
+.container .close-btn:hover{
+  color: #000000;
 }
+.container .text{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
 }
-
-/*--------------- Champion Menu Bar ---------------*/
-
-.championBar {
-    border-radius: 25px;
-    background:#333;
-    padding: 20px;
-    margin-top: 90px;
-    margin-left: 10%;
-    width: 80%;
-    height: 30px;
+.container form{
+  margin-top: -20px;
 }
-
-.championBar a {
-    float: left;
-    display: block;
-    padding-top: 3px;
-    padding-left: 35px;
-    transition: all 0.3s ease;
+.container form .data{
+  height: 45px;
+  width: 100%;
+  margin: 40px 0;
 }
-
-.championBar b, g {
-    float: left;
-    display: block;
-    text-align: center;
-    padding-top: 3px;
-    padding-left: 40px;
-    transition: all 0.3s ease;
-    font-size: 20px;
+form .data label{
+  font-size: 17px;
 }
-
-.winrate {
-    color: green;
+form .data input{
+  height: 100%;
+  width: 100%; 
+  padding-left: 10px;
+  font-size: 17px;
+  border: 1px solid lightgrey;
 }
-
-.pickrate {
-    color: yellow;
+form .data input:focus{
+  border-color: #4bf0cc;
+  border-bottom-width: 2px;
 }
-
-.bandrate {
-    color: red;
+form .btn{
+  margin: 65px 0;
+  height: 80px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
-
-.championBar a:hover {
-    color: #000;
+form .btn .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  z-index: -1;
+  transition: all 0.4s;
+  background: -webkit-linear-gradient(right, #eff148, #30f5eb,  #eff148, #30f5eb);
 }
-
-.championBar b:hover {
-    color: blue;
+form .btn:hover .inner{
+  left: 0;
 }
-
-/*represented by icon later*/
-.dot {
-    height: 30px;
-    width: 30px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
+form .btn button{
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
-
-.championBar .dot:hover{
-    background-color: #000;
+.data input, 
+.data textarea{
+  width: 100%;
+  padding: 5px;
+  font-size: 17px;
+  border: 1px solid lightgrey;
+  margin-top: 5px;
 }
-
-.seperator {
-    border-left: 2px solid #bbb;
-    height: 30px;
-    position: absolute;
-    left: 34%;
-}
-
-/*--------------- Square Box Table ---------------*/
-
-.box {
-    height: 100px;
-    width: 100px;
-    background-color:#bbb;
-}
-
-/* Float four columns side by side */
-.column {
-    float: left;
-    width: 120px;
-    padding: 10px;
-}
-
-/* Remove extra left and right margins, due to padding */
-.row {
-    margin-top: 20px;
-    margin-left:11%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-content: "";
-display: table;
-clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 1000px) {
-.column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-}
-}
-
-.text{
-    margin-top: 10px;
-    text-align:left;
-    color: white;
-}
-
-/*--------------- Square Box Table ---------------*/
-
-.title {
-    color: red;
-    font-size: 20px;
-}
-
-.footertext {
-    float: left;
-    padding-left: 5px;
-}
-
-.dot2 {
-    height: 30px;
-    width: 30px;
-    float:right;
-    background-color: #bbb;
-    border-radius: 50%;
-}
-
-.gap {
-    margin-top:5px;
+.container .data textarea{
+  resize: vertical;
 }

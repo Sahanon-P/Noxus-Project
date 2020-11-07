@@ -1,0 +1,295 @@
+
+/*--------------- Body, Footer ---------------*/
+
+body {
+    margin: 0;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-style: normal;
+    font-size: 400;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    background-color: #333;
+    color: #bfbfbf;
+    padding-top:20px;
+    padding-bottom:130px;
+    padding-left:20px;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    color:red;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/*--------------- Menu Bar ---------------*/
+
+.header {
+    overflow: hidden;
+    background-color: #333;
+}
+  
+.header a {
+    float: right;
+    color: #bfbfbf;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.header b {
+    float: left;
+    color: #ff0000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+  
+.header a:hover {
+    background-color: #111;
+}
+
+/*--------------- League of Legend Box ---------------*/
+
+#block1 {
+    border-radius: 25px;
+    background:#333;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%;
+    height: 100px;
+    text-align: center;
+    color:#a6a6a6;
+    font-size:70px; 
+}
+
+/*--------------- Splash art box ---------------*/
+
+.splash_art {
+    width: 80%;
+    height: 300px;
+    background-image: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg');
+    background-size: auto;
+    margin-top: 100px;
+    margin-left: 10%;
+}
+
+.square_picture {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-top: 180px;
+    background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/Aatrox.png');
+    background-size: cover;
+}
+
+.champion_name {
+    position: absolute;
+    color: #bfbfbf;
+    margin-left: 150px;
+    margin-top: 190px;
+    font-size: 35px;
+}
+
+.champion_title {
+    position: absolute;
+    color: #bfbfbf;
+    margin-left: 150px;
+    margin-top: 240px;
+    font-size: 22px;
+}
+
+/*--------------- Document box ---------------*/
+
+.document_box {
+    width: 70%;
+    height: 1000px;
+    background-color: #333;
+    margin-top: 20px;
+    margin-left: 15%;
+}
+
+/*--------------- Rune ---------------*/
+
+.rune_box {
+    position: absolute;
+    width: 650px;
+    height: 450px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.rune_box a {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 40px;
+    color:red;
+}
+
+.main_rune {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-left: 60px;
+    margin-top: 105px;
+}
+
+.sub_rune_box {
+    width: 290px;
+    height: 340px;
+    margin-left: 350px;
+    margin-top: 60px;
+}
+
+.sub_rune {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 45px;
+
+}
+
+/*--------------- Spell ---------------*/
+
+.spell_box {
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    margin-left: 690px;
+    margin-top: 20px;
+}
+
+.spell_box a {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    color:red;
+}
+
+.spell {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin-left: 50px;
+    margin-top: 80px;
+    display: inline-block;
+}
+
+/*--------------- Starter items ---------------*/
+
+.starter_item_box {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 490px;
+}
+
+.starter_item_box a {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    color:red;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin-left: 50px;
+    margin-top: 80px;
+    display: inline-block;
+}
+
+/*--------------- Full build ---------------*/
+
+.full_build_box {
+    position: absolute;
+    width: 1000px;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 730px;
+}
+
+.full_build_box a {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    color:red;
+}
+
+/*--------------- Skill path ---------------*/
+
+.skill_path_box {
+    position: absolute;
+    width: 550px;
+    height: 200px;
+    margin-left: 450px;
+    margin-top: 490px;
+}
+
+.skill_path_box a {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 30px;
+    color:red;
+}
+
+.skill {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 80px;
+    display: inline-block;
+}
+
+b {
+    color: #ff0000;
+    margin-top: -30px;
+    font-size: 150px;
+    display: inline-block;
+}
+
+/*--------------- footer ---------------*/
+
+.title {
+    color: red;
+    font-size: 20px;
+}
+
+.footertext {
+    float: left;
+    padding-left: 5px;
+}
+
+.dot2 {
+    height: 30px;
+    width: 30px;
+    float:right;
+    background-color: #bbb;
+    border-radius: 50%;
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> url-mapping

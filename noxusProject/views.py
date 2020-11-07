@@ -4,3 +4,6 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
     return HttpResponse(render(request,'noxusProject/index.html'))
+
+def detail(request):
+    return HttpResponse(render(request,'noxusProject/detail.html'))
