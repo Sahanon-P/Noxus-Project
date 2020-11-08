@@ -27,17 +27,14 @@
   <span class="support-icon"></span>
 </div>
 
-<table>
-  <tr>
-    {% for champ in champion %}
-    <th>
-      <a href="{{champ.name}}"><div class="box" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/{{champ.name}}.png');"></div></a>
+<div class="container">
+  {% for champ in champion %}
+    <div class="box">
+      <a href="{{champ.name}}"><div class="picture" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/{{champ.name}}.png');"></div></a>
       <a href="{{champ.name}}"><div class="text">{{champ.name}}</div></a>
-    </th>
-    {%endfor%}
-  </tr>
-</table>
-
+    </div>
+  {%endfor%}
+</div>
 
 </body>
 <footer>

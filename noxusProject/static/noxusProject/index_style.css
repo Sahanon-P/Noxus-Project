@@ -6,15 +6,13 @@ body {
     font-style: normal;
     font-size: 400;
 }
-  
+
 footer {
-    left: 0;
-    bottom: 0;
+    position: relative;
+    height: 200px;
+    margin-top: 195%;
     background-color: #333;
     color: #bfbfbf;
-    padding-top:20px;
-    padding-bottom:130px;
-    padding-left:20px;
 }
 
 h1 {
@@ -129,7 +127,7 @@ h1 {
     background-size: cover;
     border-radius: 50%;
     display: inline-block;
-    margin-left: 155px;
+    margin-left: 10%;
 }
 
 .top-icon:hover {
@@ -144,7 +142,7 @@ h1 {
     background-size: cover;
     border-radius: 50%;
     display: inline-block;
-    margin-left: 155px;
+    margin-left: 15%;
 }
 
 .jungle-icon:hover {
@@ -159,7 +157,7 @@ h1 {
     background-size: cover;
     border-radius: 50%;
     display: inline-block;
-    margin-left: 155px;
+    margin-left: 15%;
 }
 
 .mid-icon:hover {
@@ -174,7 +172,7 @@ h1 {
     background-size: cover;
     border-radius: 50%;
     display: inline-block;
-    margin-left: 155px;
+    margin-left: 15%;
 }
 
 .bottom-icon:hover {
@@ -189,7 +187,7 @@ h1 {
     background-size: cover;
     border-radius: 50%;
     display: inline-block;
-    margin-left: 155px;
+    margin-left: 15%;
 }
 
 .support-icon:hover {
@@ -198,30 +196,33 @@ h1 {
 
 /*--------------- Square Box Table ---------------*/
 
-table {
+.container {
+    position: absolute;
     width: 75%;
     margin-top: 50px;
     margin-left: 13.5%;
 }
 
-th {
-    text-align: center;
-    padding: 10px;
+.box {
+    height: 150px;
+    width: 138px;
+    display: inline-block;
 }
 
-.box {
+.picture {
     height: 100px;
     width: 100px;
+    margin-left: 14%;
     background-size: cover;
-    margin: auto;
 }
 
-.box:hover {
+.picture:hover {
     /*add later*/
 }
 
 .text{
     margin-top: 10px;
+    margin-left: 45px;
     color: white;
 }
 
