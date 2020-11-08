@@ -29,38 +29,12 @@
 
 <table>
   <tr>
+    {% for champ in champion %}
     <th>
-      <a href="detail"><div class="box" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/Aatrox.png');"></div></a>
-      <a href="detail"><div class="text">Aatrox</div></a>
+      <a href="{{champ.name}}"><div class="box" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/{{champ.name}}.png');"></div></a>
+      <a href="{{champ.name}}"><div class="text">{{champ.name}}</div></a>
     </th>
-    <th>
-      <div class="box" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/Ahri.png');"></div>
-      <div class="text">Ahri</div>
-    </th>
-    <th>
-      <div class="box" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/Akali.png');"></div>
-      <div class="text">Akali</div>
-    </th>
-    <th>
-      <div class="box" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/Alistar.png');"></div>
-      <div class="text">Alistar</div>
-    </th>
-    <th>
-      <div class="box" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/Amumu.png');"></div>
-      <div class="text">Amumu</div>
-    </th>
-    <th>
-      <div class="box" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/Anivia.png');"></div>
-      <div class="text">Anivia</div>
-    </th>
-    <th>
-      <div class="box" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/Annie.png');"></div>
-      <div class="text">Annie</div>
-    </th>
-    <th>
-      <div class="box" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/Aphelios.png');"></div>
-      <div class="text">Aphelios</div>
-    </th>
+    {%endfor%}
   </tr>
 </table>
 

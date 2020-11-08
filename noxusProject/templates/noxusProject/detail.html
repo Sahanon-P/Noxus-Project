@@ -12,12 +12,13 @@
 
 <p id="block1">League of Legend</p>
 
-<h1> - Aatrox - </h1>
+<h1> - {{champion.name}} - </h1>
 
-<div class="splash_art">
-  <div class="square_picture"></div>
-  <div class="champion_name">Aatrox</div>
-  <div class="champion_title">The Darkin blade</div>
+<div class="splash_art" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.name}}_0.jpg');">
+
+  <div class="square_picture" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/{{champion.img.main}}');"></div>
+  <div class="champion_name">{{champion.name}}</div>
+  <div class="champion_title">{{champion.title}}</div>
 </div>
 
 <div class="document_box">
@@ -42,27 +43,27 @@
 
   <div class="starter_item_box">
     <a>Start items</a>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/1055.png');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/2003.png');"></div>
+    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{starter1.img}}');"></div>
+    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{starter2.img}}');"></div>
   </div>
 
   <div class="skill_path_box">
     <a>Skill Path</a>
-    <div class="skill" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/AatroxQ.png');"></div>
+    <div class="skill" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.q}}.png');"></div>
     <b>></b>
-    <div class="skill" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/AatroxE.png');"></div>
+    <div class="skill" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.e}}.png');"></div>
     <b>></b>
-    <div class="skill" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/AatroxW.png');"></div>
+    <div class="skill" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.w}}.png');"></div>
   </div>
 
   <div class="full_build_box">
     <a>Full Build</a>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/3071.png');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/3047.png');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/3053.png');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/3065.png');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/3812.png');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/3026.png');"></div>
+    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_1.img}}');"></div>
+    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_2.img}}');"></div>
+    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_3.img}}');"></div>
+    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_4.img}}');"></div>
+    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_5.img}}');"></div>
+    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_6.img}}');"></div>
   </div>
 
 </div>
