@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path("detail/" , views.detail, name = 'detail')
+    path("<str:champion_name>" , views.detail, name = 'detail')
 ]
