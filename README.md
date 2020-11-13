@@ -143,8 +143,8 @@ Signing in is not necessary to view our website, unless the user wants to subscr
   </p>
 </details>
   
-#### Code Review Checklist
+Code Review Checklist --> [here](../../wiki/Checklist)
 
-[here](../../wiki/Checklist)
+Code Review Procedure --> [here](../..wiki/Procedure)
 
   
