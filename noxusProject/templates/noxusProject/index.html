@@ -16,8 +16,8 @@
   <!-- make the for loop of django -->
   {%for champ in champion %}
   <div class="box">
-    <a href="{{champ.name}}"><div class="picture" style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champ.name}}_0.jpg)"></div></a>
-    <a href="{{champ.name}}"><div class="text">{{champ.name}}</div></a>
+    <a href="champion/{{champ.name}}"><div class="picture" style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champ.name}}_0.jpg)"></div></a>
+    <a href="champion/{{champ.name}}"><div class="text">{{champ.name}}</div></a>
   </div>
   {% endfor %}
 </div>
