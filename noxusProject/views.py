@@ -22,14 +22,14 @@ def index(request,role=""):
 def detail(request, champion_name):
     champion  = Champion.objects.get(name=champion_name)
     item_champion = ItemChampion.objects.get(name = champion_name)
-    starter1 = Items.objects.get(id= item_champion.starter1)
-    starter2 = Items.objects.get(id= item_champion.starter2)
-    items_1 = Items.objects.get(id= item_champion.items_1)
-    items_2 = Items.objects.get(id= item_champion.items_2)
-    items_3 = Items.objects.get(id= item_champion.items_3)
-    items_4 = Items.objects.get(id= item_champion.items_4)
-    items_5 = Items.objects.get(id= item_champion.items_5)
-    items_6 =Items.objects.get(id= item_champion.items_6)
+    starter1 = item_champion.starter1
+    starter2 = item_champion.starter2
+    items_1 = item_champion.items_1
+    items_2 = item_champion.items_2
+    items_3 = item_champion.items_3
+    items_4 = item_champion.items_4
+    items_5 = item_champion.items_5
+    items_6 = item_champion.items_6
     context = {'champion':champion,
                 'starter1':starter1,
                 "starter2":starter2,
