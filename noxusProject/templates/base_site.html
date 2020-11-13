@@ -14,11 +14,12 @@
       <a href="">Contact Us</a>
     </div>
   </div>
-
-  <div class="searchBox">
-    <input class="searchInput" type="text" placeholder="Search Champion ...">
-    <button class="searchButton" href="#"></button>
-  </div>
+  <form method="get">
+    <div class="searchBox">
+      <input class="searchInput" type="text" name="search" id="search_id" placeholder="Search Champion ... (eg. Aatrox)">
+      <button class="searchButton" href="#"></button>
+    </div>
+  </form>
 
   {% block content %} {% endblock %}
 
@@ -39,3 +40,6 @@
 
 </body>
 </html>
+<script type="text/javascript ">
+  document.getElementById("search_id").value = "{{query}}"
+</script>
