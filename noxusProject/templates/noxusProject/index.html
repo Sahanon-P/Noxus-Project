@@ -1,57 +1,24 @@
-<!DOCTYPE html>
-{% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/index_style.css' %}">
-<html>
-<body style="background-color:#46494B;">
+<!------------------------------------ base site ---------------------------------------->
+{% extends 'base_site.html' %}
+{% block content %}
+<!------------------------------------------------------------------------------------->
 
-<div class="header">
-  <b>NOXUS</b>
-  <a href="#ContactUs">Contact Us</a>
-  <a href="#Admin">Admin</a>
-  <a href="#champion">Champion</a>
-</div>
-
-<p id="block1">League of Legend</p>
-
-<h1> - CHAMPIONS - </h1>
-
-<div class="searchBox">
-  <input class="searchInput" type="text" placeholder="Search Champion ...">
-</div>
-
-<div class="championBar">
-  <span class="top-icon"></span>
-  <span class="jungle-icon"></span>
-  <span class="mid-icon"></span>
-  <span class="bottom-icon"></span>
-  <span class="support-icon"></span>
+<div id="mySidenav">
+  <a href="" id="top"><div class="top-icon"></div></a>
+  <a href="" id="jungle"><div class="jungle-icon"></div></a>
+  <a href="" id="mid"><div class="mid-icon"></div></a>
+  <a href="" id="adc"><div class="adc-icon"></div></a>
+  <a href="" id="support"><div class="support-icon"></div></a>
 </div>
 
 <div class="container">
-  {% for champ in champion %}
-    <div class="box">
-      <a href="{{champ.name}}"><div class="picture" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/{{champ.name}}.png');"></div></a>
-      <a href="{{champ.name}}"><div class="text">{{champ.name}}</div></a>
-    </div>
-  {%endfor%}
+  <!-- make the for loop of django -->
+  <div class="box">
+    <a href="detail.html"><div class="picture" style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/Aatrox_0.jpg)"></div></a>
+    <a href="detail.html"><div class="text">Aatrox</div></a>
+  </div>
 </div>
 
-</body>
-<footer>
-  <div class="title">NOXUS</div>
-  <div class="footertext">
-    <p>
-      Hello, programmer!!!<br>
-      Nice too me you<br>
-      We are the developer<br>
-      from KU<br>
-    </p>
-  </div>
-  <div href="#"><span class="dot2" style="margin-right: 100px;"></span></div>
-  <div href="#"><span class="dot2" style="margin-right: 10px;"></span></div>
-  <div href="#"><span class="dot2" style="margin-right: 10px;"></span></div>
-  <br>
-  <p style="color: aliceblue; float: right; margin-right: -102px; margin-top: 20px;">Social media</p>
-
-</footer>
-</html>
+<!------------------------------------ base site ---------------------------------------->
+{% endblock %}  
+<!------------------------------------------------------------------------------------->
