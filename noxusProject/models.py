@@ -38,6 +38,7 @@ class ItemChampion(models.Model):
     items_4 = models.IntegerField(default=0)
     items_5 = models.IntegerField(default=0)
     items_6 = models.IntegerField(default=0)
+    
 
     def __str__(self):
         return f"{self.name} Build"
@@ -45,7 +46,21 @@ class ItemChampion(models.Model):
 class Champion(models.Model):
     name = models.CharField(max_length = 200, null=True)
     title = models.CharField(max_length=200, default= None, null= True)
-    img = models.ForeignKey(ImageChampion,on_delete= models.CASCADE, default=None, null=True)
+    img = models.ForeignKey(ImageChampion, on_delete= models.CASCADE, default=None, null=True)
     spell = models.ForeignKey(Spell, on_delete=models.CASCADE)
+    top = models.BooleanField(default=False)
+    mid = models.BooleanField(default=False)
+    jungler = models.BooleanField(default=False)
+    adc = models.BooleanField(default=False)
+    support = models.BooleanField(default=False)
     def __str__(self):
         return self.name
+    
+class ImageSummonnerSpell(models.Model):
+    img = models.CharField(max_length=200, null= True)
+
+class SummonnerSpell(models.Model):
+    name = models.CharField(max_length = 200, null=True)
+    img = models.ForeignKey(ImageSummonnerSpell, on_delete=models.CASCADE)
+
+    
