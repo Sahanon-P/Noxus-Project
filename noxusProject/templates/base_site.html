@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'noxusProject/index_style.css' %}">
+
+<html>
+<body style="background-color:#46494B;">
+
+  <div class="dropdown">
+    <button class="Menubtn">☰</button>
+    <div class="dropdown-menu">
+      <a href="">Home</a>
+      <a href="">My Build</a>
+      <a href="">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="searchBox">
+    <input class="searchInput" type="text" placeholder="Search Champion ...">
+    <button class="searchButton" href="#"></button>
+  </div>
+
+  {% block content %} {% endblock %}
+
+  <div id="footer"></div>
+
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("footer").style.bottom = "0";
+      } else {
+        document.getElementById("footer").style.bottom = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  </script>
+
+</body>
+</html>
