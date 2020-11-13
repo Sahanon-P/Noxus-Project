@@ -3,8 +3,20 @@ from django.http import HttpResponse
 from .models import *
 
 # Create your views here.
-def index(request):
-    context = {'champion':Champion.objects.all()}
+def index(request,role=""):
+    context = {}
+    if role == "top":
+        context['champion'] = Champion.objects.filter(top = True).all()
+    elif role == "jungle":
+        context['champion'] = Champion.objects.filter(jungler = True).all()
+    elif role == "mid":
+        context['champion'] = Champion.objects.filter(mid = True).all()
+    elif role == "adc":
+        context['champion'] = Champion.objects.filter(adc = True).all()
+    elif role == "support":
+        context['champion'] = Champion.objects.filter(support = True).all()
+    else:
+        context['champion'] = Champion.objects.all()
     return HttpResponse(render(request,'noxusProject/index.html',context))
 
 def detail(request, champion_name):
