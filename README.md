@@ -155,25 +155,25 @@ In your directory type this command.
 ` python manage.py migrate `    
 in order to migrate all the module that use in this webapp.    
 3. Our webapp use external data from website so in order to make the webapp run correctly you need to read and save data from our sources.    
-- In the project directory please type this command.    
+	- In the project directory please type this command.    
 
-   `python manage.py shell`    
-   For database saving.    
+	   `python manage.py shell`    
+	   For database saving.    
 
-- After you get into the shell please type this commands. 
+	- After you get into the shell please type this commands. 
 
-   `exec(open("update.py").read())`    
-   This will take you a few minutes depends on your internet connection.  
+	   `exec(open("update.py").read())`    
+	   This will take you a few minutes depends on your internet connection.  
 
-- Then please type these 3 commands as order.    
+	- Then please type these 3 commands as order.    
 
-   ```
-   exec(open("items_update.py").read())  
-   exec(open("rune_update.py").read()) 
-   exec(open("update_summonner_spell.py").read())    
-   ```
-   
-- Then you can type `python manage.py runserver` to see our webapp.    
-  You can type the port number as you like after the `runserver` command.    
-  For example.  
-  `python manage.py runserver 9000 `
+	   ```
+	   exec(open("items_update.py").read())  
+	   exec(open("rune_update.py").read()) 
+	   exec(open("update_summonner_spell.py").read())    
+	   ```
+
+	- Then you can type `python manage.py runserver` to see our webapp.    
+	  You can type the port number as you like after the `runserver` command.    
+	  For example.  
+	  `python manage.py runserver 9000 `
