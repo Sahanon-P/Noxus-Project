@@ -147,4 +147,7 @@ Signing in is not necessary to view our website, unless the user wants to subscr
 
 **Code Review Procedure** --> [here](../..wiki/Procedure)
 
-  
+## Installation Guide for local running server
+1. Clone this repository
+In your directory type this command
+`git clone `
