@@ -1,11 +1,10 @@
 
 /*--------------- Document box ---------------*/
-.item1 {
+.banner {
     grid-area: banner;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 20%;
-    box-shadow: 0 0 5px 5px black inset;
     height: 200px;
 }
 .champion_name {
@@ -17,17 +16,20 @@
     text-align: left;
     padding: 0 20px 0 20px;
 }
-.item2 { grid-area: rune; }
-.item3 { grid-area: spell; }
-.item4 { grid-area: skill; }
-.item5 { grid-area: start; }
-.item6 { grid-area: full; }
+.rune {
+    grid-area: rune;
+}
+.spell { grid-area: spell; }
+.skill { grid-area: skill; }
+.starting { grid-area: starting; }
+.fullitems { grid-area: fullitems; }
+
 .grid-container {
     display: grid;
     grid-template-areas:
         'banner banner banner banner banner banner'
         'rune spell spell skill skill skill'
-        'rune start start full full full';
+        'rune starting starting fullitems fullitems fullitems';
     grid-gap: 5px;
     padding: 5% 15%;
     color: white;
@@ -35,32 +37,44 @@
 .grid-container > div {
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
-    /* padding: 500px 100px; */
     font-size: 25px;
+    box-shadow: 0 0 3.5px 3.5px black inset;
   }
 /*--------------- Rune ---------------*/
-.main_rune {
+.key_rune {
     background-size: cover;
     width: 75px;
     height: 75px;
     background-repeat: no-repeat;
-    margin-left: 15%;
+    /* margin-left: 15%; */
     margin-right: auto;
-    margin-top: 20px;
-    display: block;
+    margin-top: 30px;
+    display: inline-block;
+    box-shadow: 0 0 5px 5px black inset;
+    border-radius: 50%;
+}
+.main_rune {
+    margin-top: 30px;
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    margin: 3%;
+    display: inline-block;
     box-shadow: 0 0 5px 5px black inset;
     border-radius: 50%;
 }
 .sub_rune {
+    margin-top: 30px;
     background-size: cover;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
     display: inline-block;
     box-shadow: 0 0 5px 5px black inset;
     border-radius: 50%;
+    margin: 3%;
+    margin-bottom: 15%;
 }
 /*--------------- items ---------------*/
 .square_icon {
@@ -68,7 +82,7 @@
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
-    margin: 20px 0 30px 0;
+    margin: 2.5%;
     display: inline-block;
     border-radius: 25%;
     box-shadow: 0 0 5px 5px black inset;
@@ -102,10 +116,10 @@
     visibility: visible;
 }
 /*--------------- Skill path ---------------*/
-b {
+/* b {
     font-size: 50px;
     color: transparent;
-}
+} */
 .text {
     padding-top: 30px;
 }
