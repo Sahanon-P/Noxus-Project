@@ -1,10 +1,10 @@
 import json,urllib.request
 from noxusProject.models import Champion, ImageChampion, ImageSpell,Spell
-main_url = "http://ddragon.leagueoflegends.com/cdn/10.22.1/data/en_US/champion.json"
+main_url = "http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/champion.json"
 data_byte = urllib.request.urlopen(main_url)
 data_str = json.load(data_byte)
 for name in data_str['data'].keys():
-    url_champion = urllib.request.urlopen(f'http://ddragon.leagueoflegends.com/cdn/10.22.1/data/en_US/champion/{name}.json')
+    url_champion = urllib.request.urlopen(f'http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/champion/{name}.json')
     champ = json.load(url_champion)
     temp_name = name
     temp_title = data_str['data'][name]['title']
