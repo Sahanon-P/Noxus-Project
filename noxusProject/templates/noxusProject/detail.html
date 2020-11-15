@@ -4,14 +4,16 @@
 <!------------------------------------ load stylesheet ---------------------------------------->
 {% load static %}
 <link rel="stylesheet" href="{% static 'noxusProject/detail.css' %}">
+
+
 <!------------------------------------ contents ----------------------------------------------->
 <div class="grid-container">
-
+<!------------------------------------ banner image & title ----------------------------------->
   <div class="banner" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.name}}_0.jpg');">
     <div class="champion_name">{{champion.name}}</div>
     <div class="champion_title">{{champion.title}}</div>
   </div>
-
+<!------------------------------------ rune section ------------------------------------------->
   <div class="rune">
     <div class="text">Rune</div>
       <div class="key_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Domination/Electrocute/Electrocute.png');"></div><br>
@@ -23,53 +25,54 @@
       <div class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Precision/Triumph.png');"></div>
       <div class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png');"></div>
   </div>
-
+<!------------------------------------ summoner spells ---------------------------------------->
   <div class="spell">
     <div class="text">Summonner spells<br></div>
     <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/spell/SummonerFlash.png');"></div>
     <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/spell/SummonerTeleport.png');"></div>
   </div>
-
+<!------------------------------------ skill order -------------------------------------------->
   <div class="skill">
     <div class="text">Skill Path<br></div>
     <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.q}}.png');"></div>
     <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.e}}.png');"></div>
     <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.w}}.png');"></div>
   </div>
-
+<!------------------------------------ starting items ----------------------------------------->
   <div class="starting">
     <div class="text">Start items<br></div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{starter1.img}}');">
-        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+        <span class="hover">Sample textSample textSample textSample textSample textSample text</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{starter2.img}}');">
-        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+        <span class="hover">Sample textSample textSample textSample textSample textSample text</span>
       </div>
   </div>
-
+<!------------------------------------ full items --------------------------------------------->
   <div class="fullitems">
     <div class="text">Full Build<br></div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_1.img}}');">
-        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+        <span class="hover">Sampletext</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_2.img}}');">
-        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+        <span class="hover">Sample textSample textSample textSample textSample textSample text</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_3.img}}');">
-        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+        <span class="hover">Sample textSample textSample textSample textSample textSample text</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_4.img}}');">
-        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+        <span class="hover">Sample textSample textSample textSample textSample textSample text</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_5.img}}');">
-        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+        <span class="hover">Sample textSample textSample textSample textSample textSample text</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_6.img}}');">
-        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+        <span class="hover">Sample textSample textSample textSample textSample textSample text</span>
       </div>
   </div>
-
 </div>
-<!------------------------------------ base site ---------------------------------------->
+<!------------------------------------ return btn --------------------------------------------->
+<button class="button">Return</button>
+<!------------------------------------ base site ---------------------------------------------->
 {% endblock %}  
-<!------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------->
