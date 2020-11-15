@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!------------------------------------ base site ---------------------------------------->
+{% extends 'base_site.html' %}
+{% block content %}
+<!------------------------------------------------------------------------------------->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Path to Creation</title>
+        <link rel="stylesheet" href="login_style.css">
+        <script src="https://kit.fontawesome.com/5f2d2f1537.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="login">
+            <h1>Path to Creation</h1>
+            <form method="post">
+                <div class="textbox">
+                    <i class="fas fa-user-secret"></i>
+                    <input type="text" placeholder="Username" name="" value="">
+                </div>
+            
+                <div class="textbox">
+                    <i class="fas fa-fingerprint"></i>
+                    <input type="password" placeholder="Password" name="" value="">
+                </div>
+            
+                <input class="btn" type="button" value="Login">
+            
+                <div class="signup_link">
+                    Not a member? <a href="sign_up.html">Signup</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
+<!------------------------------------ base site ---------------------------------------->
+{% endblock %}  
+<!------------------------------------------------------------------------------------->

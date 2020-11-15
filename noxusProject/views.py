@@ -43,3 +43,6 @@ def detail(request, champion_name):
     # context = {'champion':champion}
     return HttpResponse(render(request,'noxusProject/detail.html',context))
 
+def contact(request):
+    return HttpResponse(render(request,'noxusProject/contact.html'))
+

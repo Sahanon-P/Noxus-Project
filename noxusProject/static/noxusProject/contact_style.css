@@ -1,122 +1,130 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: rgb(49, 50, 51);
 }
-body{
-  height: 100vh;
-  width: 100%;
-  /* background: linear-gradient(115deg, #000000 10%, #39cbf0 90%); */
-  background: #4B4B4C;
+.wrapper 
+{
+    width: 100%;
+    min-height: 100px;
+    background:#262626;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
-.show-btn{
-  background: rgb(0, 0, 0);
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #ffffff;
-  cursor: pointer;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.column
+{
+    position: relative;
+    width: 20%;
+    height: 360px;
+    float: left;
+    overflow: hidden;
 }
-.show-btn, .container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.column .image
+{
+    position: relative;
 }
-input[type="checkbox"]{
-  display: none;
+.column .image img
+{
+    max-width: 100%;
+    transition: 1s;
 }
-.container{
-  display: none;
-  background: #fff;
-  width: 410px;
-  height: 420px;
-  padding: 30px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+.column:hover .image img
+{
+    transform: scale(1.5);
 }
-#show:checked ~  .container{
-  display: block;
+.column .details 
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #fff;
+    text-align: center;
+    transform: scale(0.5);
+    visibility: hidden;
+    transition: 0.5s;
 }
-.container .close-btn{
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 17px;
-  cursor: pointer;
+.column:hover .details 
+{
+    transform: scale(1);
+    visibility: visible;
 }
-.container .close-btn:hover{
-  color: #000000;
+.column .details .content
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    box-sizing: border-box;
 }
-.container .text{
-  font-size: 35px;
-  font-weight: 600;
-  text-align: center;
+.column .details .content h1
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #262626;
+    text-transform: uppercase;
 }
-.container form{
-  margin-top: -20px;
+.column .details .content h1 span
+{
+    font-size: 16px;
+    color: #999;
 }
-.container form .data{
-  height: 45px;
-  width: 100%;
-  margin: 40px 0;
+.column .details .content h1 span:before
+{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 50px;
+    height: 2px;
+    background: rgb(4, 250, 229);
+    left: 50%;
+    transform: translateX(-50%);
 }
-form .data label{
-  font-size: 17px;
+.column .details .content ul
+{
+    position: relative;
+    display: flex;
+    padding: 0;
+    width: 70%;
+    margin: 30px auto 0;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
 }
-form .data input{
-  height: 100%;
-  width: 100%; 
-  padding-left: 10px;
-  font-size: 17px;
-  border: 1px solid lightgrey;
+.column:hover .details .content ul
+{
+    transform: translateY(0px);
+    opacity: 1;
 }
-form .data input:focus{
-  border-color: #4bf0cc;
-  border-bottom-width: 2px;
+.column .details .content ul li
+{
+    list-style: none;
+    width: 25%;
+    text-align: center;
 }
-form .btn{
-  margin: 65px 0;
-  height: 80px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+.column .details .content ul li a
+{
+    display: block;
+    color: #262626;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid #262626;
 }
-form .btn .inner{
-  height: 100%;
-  width: 300%;
-  position: absolute;
-  left: -100%;
-  z-index: -1;
-  transition: all 0.4s;
-  background: -webkit-linear-gradient(right, #eff148, #30f5eb,  #eff148, #30f5eb);
-}
-form .btn:hover .inner{
-  left: 0;
-}
-form .btn button{
-  height: 100%;
-  width: 100%;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-.data input, 
-.data textarea{
-  width: 100%;
-  padding: 5px;
-  font-size: 17px;
-  border: 1px solid lightgrey;
-  margin-top: 5px;
-}
-.container .data textarea{
-  resize: vertical;
+.column .details .content ul li a:hover
+{
+    background: #f00;
+    color: #fff;
+    border: 1px solid #f00;
 }
