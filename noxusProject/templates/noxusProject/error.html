@@ -1,0 +1,16 @@
+<!------------------------------------ base site ---------------------------------------->
+{% extends 'base_site.html' %}
+{% block content %}
+<!------------------------------------------------------------------------------------->
+<style>
+.container{
+    text-align: center;
+}
+</style>
+
+<div class="container">
+    <img src ="https://static.wikia.nocookie.net/leagueoflegends/images/5/57/LoR_OMG_Emote.png/revision/latest/scale-to-width-down/512?cb=20200429082248" width="200px" height="200px">
+    <h1>Champion Not Found!!</h1>
+    <button><a href="{% url 'index' %}">{{"Return to home"}}</a></button>
+</div>
+{% endblock %}

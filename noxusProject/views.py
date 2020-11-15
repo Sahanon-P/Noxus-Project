@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
 
+
 # Create your views here.
 def index(request,role=""):
     context = {}
@@ -17,6 +18,12 @@ def index(request,role=""):
         context['champion'] = Champion.objects.filter(support = True).all()
     else:
         context['champion'] = Champion.objects.all()
+    query = request.GET.get('search')
+    try:
+        if query:
+            return detail(request,query)
+    except Champion.DoesNotExist:
+        return HttpResponse(render(request,'noxusProject/error.html'))
     return HttpResponse(render(request,'noxusProject/index.html',context))
 
 def detail(request, champion_name):
