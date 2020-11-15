@@ -58,7 +58,7 @@ class RuneChampion(models.Model):
     sub_row1 = models.ForeignKey(SubRune,on_delete=models.CASCADE,related_name="sub_row1")
     sub_row2 = models.ForeignKey(SubRune,on_delete=models.CASCADE,related_name="sub_row2")
     def __str__(self) -> str:
-        return f"{self.name} rune"
+        return f"{self.name} Rune"
 
 class ImageChampion(models.Model):
     main = models.CharField(max_length=200, default= None, null= True)
@@ -90,10 +90,17 @@ class Champion(models.Model):
     support = models.BooleanField(default=False)
     def __str__(self):
         return self.name
-    
-class ImageSummonnerSpell(models.Model):
-    img = models.CharField(max_length=200, null= True)
 
 class SummonnerSpell(models.Model):
     name = models.CharField(max_length = 200, null=True)
-    img = models.ForeignKey(ImageSummonnerSpell, on_delete=models.CASCADE)
+    img = models.CharField(max_length = 200, null=True)
+    def __str__(self) -> str:
+        return self.name
+
+class SummonnerSpellChampion(models.Model):
+    name = models.CharField(max_length = 200, null=True)
+    spell1 = models.ForeignKey(SummonnerSpell,on_delete=models.CASCADE,related_name="spell1")
+    spell2 = models.ForeignKey(SummonnerSpell,on_delete=models.CASCADE,related_name="spell2")
+    def __str__(self) -> str:
+        return f"{self.name} Spell"
+
