@@ -1,6 +1,6 @@
 import json, urllib.request
 from noxusProject.models import Items
-urls = "http://ddragon.leagueoflegends.com/cdn/10.22.1/data/en_US/item.json"
+urls = "http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/item.json"
 data = urllib.request.urlopen(urls)
 item = json.load(data)
 item_list = item['data'].keys()

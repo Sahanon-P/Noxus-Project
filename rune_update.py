@@ -3,7 +3,7 @@ import urllib.request
 from noxusProject.models import *
 # with open("rune.json", 'r', encoding="cp866") as input_file:
 data = urllib.request.urlopen(
-    "http://ddragon.leagueoflegends.com/cdn/10.22.1/data/en_US/runesReforged.json")
+    "http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/runesReforged.json")
 rune = json.load(data)
 # each rune id
 list_rune = []

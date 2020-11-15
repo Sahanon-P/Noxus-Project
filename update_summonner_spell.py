@@ -1,6 +1,6 @@
 import json, urllib.request
 from noxusProject.models import SummonnerSpell, ImageSummonnerSpell
-with urllib.request.urlopen("http://ddragon.leagueoflegends.com/cdn/10.22.1/data/en_US/summoner.json") as input_file:
+with urllib.request.urlopen("http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/summoner.json") as input_file:
         data = input_file.read()
         spell = json.loads(data)
         spell_list = spell['data'].keys()
