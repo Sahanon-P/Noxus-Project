@@ -29,24 +29,12 @@ def index(request,role=""):
 def detail(request, champion_name):
     champion  = Champion.objects.get(name=champion_name)
     item_champion = ItemChampion.objects.get(name = champion_name)
-    starter1 = item_champion.starter1
-    starter2 = item_champion.starter2
-    items_1 = item_champion.items_1
-    items_2 = item_champion.items_2
-    items_3 = item_champion.items_3
-    items_4 = item_champion.items_4
-    items_5 = item_champion.items_5
-    items_6 = item_champion.items_6
+    rune_champion = RuneChampion.objects.get(name = champion_name)
+    spell = SummonnerSpellChampion.objects.get(name = champion_name)
     context = {'champion':champion,
-                'starter1':starter1,
-                "starter2":starter2,
-                "items_1":items_1,
-                "items_2":items_2,
-                "items_3":items_3,
-                "items_4":items_4,
-                "items_5":items_5,
-                "items_6":items_6
+                'items' : item_champion,
+                'runes' : rune_champion,
+                'summonner_spell' : spell
     }
-    # context = {'champion':champion}
     return HttpResponse(render(request,'noxusProject/detail.html',context))
 

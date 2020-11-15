@@ -1,5 +1,5 @@
 import json, urllib.request
-from noxusProject.models import SummonnerSpell, ImageSummonnerSpell
+from noxusProject.models import SummonnerSpell
 with urllib.request.urlopen("http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/summoner.json") as input_file:
         data = input_file.read()
         spell = json.loads(data)
@@ -10,10 +10,7 @@ with urllib.request.urlopen("http://ddragon.leagueoflegends.com/cdn/10.23.1/data
 
             spell_pic = spell['data'][spell_id]['image']['full'] # spell pic
             # http://ddragon.leagueoflegends.com/cdn/10.22.1/img/spell/{spell_pic}
-            
-            pic = ImageSummonnerSpell(img = spell_pic)
-            pic.save()
-            name = SummonnerSpell(name = spell_name, img = pic)
+            name = SummonnerSpell(name = spell_name, img = spell_pic)
             name.save()
 
             
