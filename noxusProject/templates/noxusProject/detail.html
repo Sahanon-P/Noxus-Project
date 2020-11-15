@@ -1,89 +1,83 @@
-<!DOCTYPE html>
+<!------------------------------------ base site ---------------------------------------->
+{% extends 'base_site.html' %}
+{% block content %}
+<!------------------------------------------------------------------------------------->
 {% load static %}
 <link rel="stylesheet" href="{% static 'noxusProject/detail_style.css' %}">
-<html>
-<body style="background-color: #46494B;">
-<div class="header">
-  <b>NOXUS</b>
-  <a href="#ContactUs">Contact Us</a>
-  <a href="#Admin">Admin</a>
-  <a href="#champion">Champion</a>
+
+<div class="grid-container">
+  <div class="item1" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.name}}_0.jpg');">
+    <!-- <div class="banner" ></div> -->
+    <div class="champion_name">{{champion.name}}</div>
+    <div class="champion_title">{{champion.title}}</div>
+  </div>
+
+  <div class="item2">
+    <div class="text">Rune</div>
+      <span class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Domination/Electrocute/Electrocute.png');"></span><br>
+      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png');"></span><b>.</b>
+      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Precision/Triumph.png');"></span><br>
+      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png');"></span><b>.</b>
+      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png');"></span><br>
+      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png');"></span><b>LO</b>
+  </div>
+
+  <div class="item3">
+    <div class="text">Summonner spells<br></div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/spell/SummonerFlash.png');"></div>
+    <b>.</b>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/spell/SummonerTeleport.png');"></div>
+  </div>
+
+  <div class="item4">
+    <div class="text">Skill Path<br></div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.q}}.png');"></div>
+    <b>.</b>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.e}}.png');"></div>
+    <b>.</b>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.w}}.png');"></div>
+  </div>
+
+  <div class="item5">
+    <div class="text">Start items<br></div>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{starter1.img}}');">
+        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+      </div>
+    <b>.</b>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{starter2.img}}');">
+        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+      </div>
+  </div>
+
+  <div class="item6">
+    <div class="text">Full Build<br></div>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_1.img}}');">
+        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+      </div>
+    <b>.</b>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_2.img}}');">
+        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+      </div>
+    <b>.</b>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_3.img}}');">
+        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+      </div>
+    <b>.</b>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_4.img}}');">
+        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+      </div>
+    <b>.</b>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_5.img}}');">
+        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+      </div>
+    <b>.</b>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_6.img}}');">
+        <span class="square_icon_hover">Sample textSample textSample textSample textSample textSample text</span>
+      </div>
+  </div>
+
 </div>
 
-<p id="block1">League of Legend</p>
-
-<h1> - {{champion.name}} - </h1>
-
-<div class="splash_art" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.name}}_0.jpg');">
-
-  <div class="square_picture" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/champion/{{champion.img.main}}');"></div>
-  <div class="champion_name">{{champion.name}}</div>
-  <div class="champion_title">{{champion.title}}</div>
-</div>
-
-<div class="document_box">
-  <div class="rune_box">
-    <a>Rune</a>
-    <span class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Domination/Electrocute/Electrocute.png');"></span>
-    <div class="sub_rune_box">
-      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png');"></span>
-      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Precision/Triumph.png');"></span>
-      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png');"></span>
-      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png');"></span>
-      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png');"></span>
-      <span class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png');"></span>
-    </div>
-  </div>
-
-  <div class="spell_box">
-    <a>Summonner spells</a>
-    <div class="spell" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/spell/SummonerFlash.png');"></div>
-    <div class="spell" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/spell/SummonerTeleport.png');"></div>
-  </div>
-
-  <div class="starter_item_box">
-    <a>Start items</a>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{starter1.img}}');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{starter2.img}}');"></div>
-  </div>
-
-  <div class="skill_path_box">
-    <a>Skill Path</a>
-    <div class="skill" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.q}}.png');"></div>
-    <b>></b>
-    <div class="skill" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.e}}.png');"></div>
-    <b>></b>
-    <div class="skill" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.21.1/img/spell/{{champion.spell.img.w}}.png');"></div>
-  </div>
-
-  <div class="full_build_box">
-    <a>Full Build</a>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_1.img}}');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_2.img}}');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_3.img}}');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_4.img}}');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_5.img}}');"></div>
-    <div class="item" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.22.1/img/item/{{items_6.img}}');"></div>
-  </div>
-
-</div>
-
-<footer>
-  <div class="title">NOXUS</div>
-  <div class="footertext">
-    <p>
-      Hello, programmer!!!<br>
-      Nice too me you<br>
-      We are the developer<br>
-      from KU<br>
-    </p>
-  </div>
-  <div href="#"><span class="dot2" style="margin-right: 100px;"></span></div>
-  <div href="#"><span class="dot2" style="margin-right: 10px;"></span></div>
-  <div href="#"><span class="dot2" style="margin-right: 10px;"></span></div>
-  <br>
-  <p style="color: aliceblue; float: right; margin-right: -102px; margin-top: 20px;">Social media</p>
-</footer>
-
-</body>
-</html>
+<!------------------------------------ base site ---------------------------------------->
+{% endblock %}  
+<!------------------------------------------------------------------------------------->
