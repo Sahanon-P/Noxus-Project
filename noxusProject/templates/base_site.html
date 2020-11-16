@@ -10,9 +10,10 @@
     <button class="Menubtn">☰</button>
 
       <div class="dropdown-menu">
-        <a href="">Home</a>
+        <a href="home">Home</a>
         <a href="">My Build</a>
         <a href="">Contact Us</a>
+        <a href="create_build">Creator</a>
       </div>
       
   </div>
@@ -22,9 +23,6 @@
       <button class="searchButton" href="#"></button>
     </div>
   </form>
-  <!-- <script type="text/javascript ">
-    document.getElementById("search_id").value = "{{query}}"
-  </script> -->
 
   {% block content %} {% endblock %}
 
@@ -42,6 +40,5 @@
       prevScrollpos = currentScrollPos;
     }
   </script>
-
 </body>
 </html>

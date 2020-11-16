@@ -38,3 +38,5 @@ def detail(request, champion_name):
     }
     return HttpResponse(render(request,'noxusProject/detail.html',context))
 
+# def create_build(request):
+#     return HttpResponse(render(request,'noxusProject/create_build.html'))
