@@ -21,7 +21,7 @@ def index(request,role=""):
     query = request.GET.get('search')
     try:
         if query:
-            return detail(request,query)
+            return search(request,query)
     except Champion.DoesNotExist:
         return HttpResponse(render(request,'noxusProject/error.html'))
     return HttpResponse(render(request,'noxusProject/index.html',context))
@@ -37,4 +37,9 @@ def detail(request, champion_name):
                 'summonner_spell' : spell
     }
     return HttpResponse(render(request,'noxusProject/detail.html',context))
+
+def search(request,champion_name):
+    champion  = Champion.objects.get(name=champion_name)
+    context = {'champ':champion}
+    return HttpResponse(render(request,'noxusProject/search.html',context))
 
