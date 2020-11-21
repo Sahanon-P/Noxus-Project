@@ -1,10 +1,14 @@
 <!------------------------------------ base site ---------------------------------------->
 {% extends 'base_site.html' %}
 {% block content %}
+<!------------------------------------ load stylesheet ---------------------------------------->
+{% load static %}
+<link rel="stylesheet" href="{% static 'noxusProject/index_style.css' %}">
 <!------------------------------------------------------------------------------------->
 
 
 <div id="mySidenav">
+  <a href="all" id="all"><div class="all-icon"></div></a>
   <a href="top" id="top"><div class="top-icon"></div></a>
   <a href="jungle" id="jungle"><div class="jungle-icon"></div></a>
   <a href="mid" id="mid"><div class="mid-icon"></div></a>
