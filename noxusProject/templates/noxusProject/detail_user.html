@@ -1,0 +1,78 @@
+<!------------------------------------ base site ---------------------------------------------->
+{% extends 'base_site.html' %}
+{% block content %}
+<!------------------------------------ load stylesheet ---------------------------------------->
+{% load static %}
+<link rel="stylesheet" href="{% static 'noxusProject/detail_style.css' %}">
+
+
+<!------------------------------------ contents ----------------------------------------------->
+<div class="grid-container">
+<!------------------------------------ banner image & title ----------------------------------->
+  <div class="banner" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{champion.champion.name}}_0.jpg');">
+    <div class="champion_name">{{champion.champion.name}}</div>
+    <div class="champion_title">{{champion.champion.title}}</div>
+  </div>
+<!------------------------------------ rune section ------------------------------------------->
+  <div class="rune">
+    <div class="text">Rune</div>
+      <div class="key_rune" style="background-image: url('https://ddragon.canisback.com/img/{{champion.key_stone.img}}');"></div><br>
+      
+      <div class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/{{champion.row1.img}}');"></div>
+      <div class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/{{champion.row2.img}}');"></div>
+      <div class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/{{champion.row3.img}}');"></div><br>
+      
+      <div class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/{{champion.sub_row1.img}}');"></div>
+      <div class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/{{champion.sub_row2.img}}');"></div>
+  </div>
+<!------------------------------------ summoner spells ---------------------------------------->
+  <div class="spell">
+    <div class="text">Summonner spells<br></div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.spell1.img}}');"></div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.spell2.img}}');"></div>
+  </div>
+<!------------------------------------ skill order -------------------------------------------->
+  <div class="skill">
+    <div class="text">Skill Path<br></div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.champion.spell.img.q}}.png');"></div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.champion.spell.img.e}}.png');"></div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.champion.spell.img.w}}.png');"></div>
+  </div>
+<!------------------------------------ starting items ----------------------------------------->
+  <div class="starting">
+    <div class="text">Start items<br></div>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.starter1.img}}');">
+        <span class="hover">{{champion.starter1.description}}</span>
+      </div>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.starter2.img}}');">
+        <span class="hover">{{champion.starter2.description}}</span>
+      </div>
+  </div>
+<!------------------------------------ full items --------------------------------------------->
+  <div class="fullitems">
+    <div class="text">Full Build<br></div>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_1.img}}');">
+        <span class="hover">{{champion.items_1.description}}</span>
+      </div>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_2.img}}');">
+        <span class="hover">{{champion.items_2.description}}</span>
+      </div>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_3.img}}');">
+        <span class="hover">{{champion.items_3.description}}</span>
+      </div>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_4.img}}');">
+        <span class="hover">{{champion.items_4.description}}</span>
+      </div>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_5.img}}');">
+        <span class="hover">{{champion.items_5.description}}</span>
+      </div>
+      <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_6.img}}');">
+        <span class="hover">{{champion.items_6.description}}</span>
+      </div>
+  </div>
+</div>
+<!------------------------------------ return btn --------------------------------------------->
+<a href="{% url 'my_build' %}" class="button">{{"Return"}}</a>
+<!------------------------------------ base site ---------------------------------------------->
+{% endblock %}  
+<!--------------------------------------------------------------------------------------------->

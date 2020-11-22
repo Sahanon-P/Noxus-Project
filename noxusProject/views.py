@@ -1,11 +1,13 @@
+from django.http import request
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .models import *
 from django.contrib import messages
 from .forms import CreateUserForm
 from django.contrib.auth import authenticate, login, logout
-
-from django.db import reset_queries
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 
 
@@ -24,19 +26,12 @@ def index(request,role=""):
         context['champion'] = Champion.objects.filter(support = True).all()
     else:
         context['champion'] = Champion.objects.all()
-    if request.GET:
-        query = request.GET.get("search")
-        all_champ = Champion.objects.all()
-        querylist = query.split(" ")
-        for x in all_champ:
-            for i in range(len(querylist)):
-                if (querylist[i].lower() == x.lower()):
-                    try:
-                        return detail(request,x)
-                    except ItemChampion.DoesNotExist:
-                        return HttpResponse(render(request,'noxusProject/error.html'))
+    query = request.GET.get('search')
+    try:
         if query:
-            return HttpResponse(render(request,'noxusProject/error.html'))
+            return search(request,query)
+    except Champion.DoesNotExist:
+        return HttpResponse(render(request,'noxusProject/error.html'))
     return HttpResponse(render(request,'noxusProject/index.html',context))
 
 def detail(request, champion_name):
@@ -50,7 +45,6 @@ def detail(request, champion_name):
                 'summonner_spell' : spell
     }
     return HttpResponse(render(request,'noxusProject/detail.html',context))
-
 
 
 def search(request,champion_name):
@@ -95,8 +89,70 @@ def loginPage(request):
 
 def logoutPage(request):
 	logout(request)
-	return redirect('login')
-    
-    
+	return redirect('index')
 
+class BuildCreate(LoginRequiredMixin,CreateView):
+    model = Build
+    fields = ['build_name', 'champion','starter1','starter2',
+    'items_1',
+    'items_2',
+    'items_3',
+    'items_4',
+    'items_5',
+    'items_6',
+    'spell1',
+    'spell2',
+    'key_stone', 
+    'row1',
+    'row2',
+    'row3',
+    'sub_row1',
+    'sub_row2',
+    ]
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
+class BuildUpdate(UpdateView,UserPassesTestMixin,LoginRequiredMixin):
+    model = Build
+    fields = ['build_name', 'champion','starter1','starter2',
+    'items_1',
+    'items_2',
+    'items_3',
+    'items_4',
+    'items_5',
+    'items_6',
+    'spell1',
+    'spell2',
+    'key_stone', 
+    'row1',
+    'row2',
+    'row3',
+    'sub_row1',
+    'sub_row2',
+    ]
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+    
+    def test_func(self):
+        build = self.get_object()
+        if self.request.user == build.user:
+            return True
+        return False
+
+    
+class BuildDelete(DeleteView,UserPassesTestMixin,LoginRequiredMixin):
+    model = Build
+
+def my_build(request):
+    champion = Build.objects.filter(user = request.user)
+    context = {'build': champion}
+    return HttpResponse(render(request,'noxusProject/build_user.html',context))
+    
+def detail_build(request,name):
+    champion = Build.objects.get(build_name = name)
+    context = {'champion': champion}
+    return HttpResponse(render(request,'noxusProject/detail_user.html',context))
+    
 

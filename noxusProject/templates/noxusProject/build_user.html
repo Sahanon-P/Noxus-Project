@@ -1,0 +1,21 @@
+<!------------------------------------ base site ---------------------------------------->
+{% extends 'base_site.html' %}
+{% block content %}
+<!------------------------------------------------------------------------------------->
+{% load static %}
+<link rel="stylesheet" href="{% static 'noxusProject/index_style.css' %}">
+{%if build %}
+<div class="container">
+  <!-- make the for loop of django -->
+  {%for b in build %}
+    <div class="box">
+        <a href="{{b.build_name}}"><div class="picture" style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{b.champion.name}}_0.jpg)"></div></a>
+        <a href="{{b.build_name}}"><div class="text">{{b.build_name}}</div></a>
+    </div>
+   {%endfor%}
+</div>
+{%else%}
+<h1>Has no build yet</h1>
+{%endif%}
+<!------------------------------------ base site ---------------------------------------->
+{% endblock %}  
