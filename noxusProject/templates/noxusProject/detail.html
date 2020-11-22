@@ -3,7 +3,7 @@
 {% block content %}
 <!------------------------------------ load stylesheet ---------------------------------------->
 {% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/detail.css' %}">
+<link rel="stylesheet" href="{% static 'noxusProject/detail_style.css' %}">
 
 
 <!------------------------------------ contents ----------------------------------------------->
@@ -72,7 +72,7 @@
   </div>
 </div>
 <!------------------------------------ return btn --------------------------------------------->
-<button class="button" href="#">Return</button>
+<a href="{% url 'index' %}" class="button">{{"Return"}}</a>
 <!------------------------------------ base site ---------------------------------------------->
 {% endblock %}  
 <!--------------------------------------------------------------------------------------------->
