@@ -3,7 +3,7 @@
 {% block content %}
 <!------------------------------------ load stylesheet ---------------------------------------->
 {% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/detail_style.css' %}">
+<link rel="stylesheet" href="{% static 'noxusProject/detail.css' %}">
 
 
 <!------------------------------------ contents ----------------------------------------------->
@@ -16,63 +16,85 @@
 <!------------------------------------ rune section ------------------------------------------->
   <div class="rune">
     <div class="text">Rune</div>
-      <div class="key_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.key_stone.img}}');"></div><br>
+      <div class="key_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.key_stone.img}}');">
+        <!-- <span class="hover">{{items.starter1.name}}</span> -->
+      </div><br>
       
-      <div class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.row1.img}}');"></div>
-      <div class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.row2.img}}');"></div>
-      <div class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.row3.img}}');"></div><br>
+      <div class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.row1.img}}');">
+        <!-- <span class="hover">{{items.starter1.name}}</span> -->
+      </div>
+      <div class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.row2.img}}');">
+        <!-- <span class="hover">{{items.starter1.name}}</span> -->
+      </div>
+      <div class="main_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.row3.img}}');">
+        <!-- <span class="hover">{{items.starter1.name}}</span> -->
+      </div><br>
       
-      <div class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.sub_row1.img}}');"></div>
-      <div class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.sub_row2.img}}');"></div>
+      <div class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.sub_row1.img}}');">
+        <!-- <span class="hover">{{items.starter1.name}}</span> -->
+      </div>
+      <div class="sub_rune" style="background-image: url('https://ddragon.canisback.com/img/{{runes.sub_row2.img}}');">
+        <!-- <span class="hover">{{items.starter1.name}}</span> -->
+      </div>
   </div>
 <!------------------------------------ summoner spells ---------------------------------------->
   <div class="spell">
     <div class="text">Summonner spells<br></div>
-    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{summonner_spell.spell1.img}}');"></div>
-    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{summonner_spell.spell2.img}}');"></div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{summonner_spell.spell1.img}}');">
+      <!-- <span class="hover">{{items.starter1.name}}</span> -->
+    </div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{summonner_spell.spell2.img}}');">
+      <!-- <span class="hover">{{items.starter1.name}}</span> -->
+    </div>
   </div>
 <!------------------------------------ skill order -------------------------------------------->
   <div class="skill">
     <div class="text">Skill Path<br></div>
-    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.spell.img.q}}.png');"></div>
-    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.spell.img.e}}.png');"></div>
-    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.spell.img.w}}.png');"></div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.spell.img.q}}.png');">
+      <!-- <span class="hover">{{items.starter1.name}}</span> -->
+    </div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.spell.img.e}}.png');">
+      <!-- <span class="hover">{{items.starter1.name}}</span> -->
+    </div>
+    <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/spell/{{champion.spell.img.w}}.png');">
+      <!-- <span class="hover">{{items.starter1.name}}</span> -->
+    </div>
   </div>
 <!------------------------------------ starting items ----------------------------------------->
   <div class="starting">
     <div class="text">Start items<br></div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{items.starter1.img}}');">
-        <span class="hover">{{items.starter1.description}}</span>
+        <!-- <span class="hover">{{items.starter1.name}}</span> -->
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{items.starter2.img}}');">
-        <span class="hover">{{items.starter2.description}}</span>
+        <!-- <span class="hover">{{items.starter2.name}}</span> -->
       </div>
   </div>
 <!------------------------------------ full items --------------------------------------------->
   <div class="fullitems">
     <div class="text">Full Build<br></div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{items.items_1.img}}');">
-        <span class="hover">{{items.items_1.description}}</span>
+        <!-- <span class="hover">{{items.items_1.name}}</span> -->
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{items.items_2.img}}');">
-        <span class="hover">{{items.items_2.description}}</span>
+        <!-- <span class="hover">{{items.items_2.name}}</span> -->
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{items.items_3.img}}');">
-        <span class="hover">{{items.items_3.description}}</span>
+        <!-- <span class="hover">{{items.items_3.name}}</span> -->
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{items.items_4.img}}');">
-        <span class="hover">{{items.items_4.description}}</span>
+        <!-- <span class="hover">{{items.items_4.name}}</span> -->
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{items.items_5.img}}');">
-        <span class="hover">{{items.items_5.description}}</span>
+        <!-- <span class="hover">{{items.items_5.name}}</span> -->
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{items.items_6.img}}');">
-        <span class="hover">{{items.items_6.description}}</span>
+        <!-- <span class="hover">{{items.items_6.name}}</span> -->
       </div>
   </div>
 </div>
 <!------------------------------------ return btn --------------------------------------------->
-<a href="{% url 'index' %}" class="button">{{"Return"}}</a>
+<!-- <a href="{% url 'index' %}" class="button">{{"Return"}}</a> -->
 <!------------------------------------ base site ---------------------------------------------->
 {% endblock %}  
 <!--------------------------------------------------------------------------------------------->

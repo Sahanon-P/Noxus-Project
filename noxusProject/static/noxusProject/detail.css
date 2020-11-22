@@ -19,6 +19,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
+    color: #D2B55B;
 }
 /*--------------- Initializing grid ---------------*/
 .rune { grid-area: rune; }
@@ -38,12 +39,16 @@
     padding-bottom: 0;
 }
 .grid-container > div {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
     font-size: 25px;
     box-shadow: 0 0 3.5px 3.5px black inset;
   }
+
 /*--------------- Runes ---------------*/
+.rune:hover {
+    box-shadow: 0 0 10px 1px #D2B55B;
+}
 .key_rune {
     background-size: cover;
     width: 75px;
@@ -87,10 +92,17 @@
     margin: 2.5%;
     display: inline-block;
     border-radius: 25%;
-    box-shadow: 0 0 5px 5px black inset;
+    /* box-shadow: 0 0 5px 5px black inset; */
+    box-shadow: 0 0 10px 1px #111 inset;
 }
+
+/* .square_icon:hover {
+    
+    box-shadow: 0 0 5px 5px black inset;
+} */
+
 /*--------------- hover ---------------*/
-.hover {
+/* .hover {
     visibility: hidden;
     width: 150px;
     background-color: rgba(0, 0, 0, 0.75);
@@ -115,19 +127,19 @@
 }
 .square_icon:hover .hover {
     visibility: visible;
-}
-.button {
+} */
+/* .button {
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 5px 5px black inset;
     color: white;
-    padding: 12px 75px;
+    padding: 5px 75px;
     text-align: center;
     font-size: 20px;
     margin-left: 15%;
-    margin-top: 0.3%;
     font-family: Georgia, serif;
     border: none;
+    text-decoration: none;
 }
 .button:hover {
     background-color: rgb(75, 0, 0);
-}
+} */
