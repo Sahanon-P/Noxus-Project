@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
+from django.db import reset_queries
+
 
 
 # Create your views here.
@@ -18,12 +20,19 @@ def index(request,role=""):
         context['champion'] = Champion.objects.filter(support = True).all()
     else:
         context['champion'] = Champion.objects.all()
-    query = request.GET.get('search')
-    try:
+    if request.GET:
+        query = request.GET.get("search")
+        all_champ = Champion.objects.all()
+        querylist = query.split(" ")
+        for x in all_champ:
+            for i in range(len(querylist)):
+                if (querylist[i].lower() == x.lower()):
+                    try:
+                        return detail(request,x)
+                    except ItemChampion.DoesNotExist:
+                        return HttpResponse(render(request,'noxusProject/error.html'))
         if query:
-            return search(request,query)
-    except Champion.DoesNotExist:
-        return HttpResponse(render(request,'noxusProject/error.html'))
+            return HttpResponse(render(request,'noxusProject/error.html'))
     return HttpResponse(render(request,'noxusProject/index.html',context))
 
 def detail(request, champion_name):
@@ -39,6 +48,7 @@ def detail(request, champion_name):
     return HttpResponse(render(request,'noxusProject/detail.html',context))
 
 
+
 def search(request,champion_name):
     champion  = Champion.objects.get(name=champion_name)
     context = {'champ':champion}
@@ -47,4 +57,5 @@ def search(request,champion_name):
 def contact(request):
     return HttpResponse(render(request,'noxusProject/contact.html'))
     
+
 
