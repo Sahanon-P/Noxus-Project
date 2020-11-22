@@ -153,6 +153,13 @@ Signing in is not necessary to view our website, unless the user wants to subscr
 
 
 ## Installation Guide for local running server
+Before you clone make sure your environment match our requirement. See the requirement down below.    
+```
+python==3.7
+Django==3.1.2
+django-heroku==0.3.1
+gunicorn==20.0.4
+```
 1. Clone this repository
 In your directory type this command.    
 `git clone https://github.com/Sahanon-P/Noxus-Project.git`    
