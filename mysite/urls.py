@@ -18,6 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     path('', include('noxusProject.urls')),
-    path('accounts/', include("django.contrib.auth.urls")),
     path('np/admin/',admin.site.urls),
 ]

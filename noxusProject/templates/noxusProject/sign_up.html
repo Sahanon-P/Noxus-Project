@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign Up</title>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'noxusProject/sign_up.css'%}">
+        <script src="https://kit.fontawesome.com/5f2d2f1537.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="login">
+            <h1>Create Account</h1>
+            <form method="POST">
+                {%csrf_token%}
+                <div class="textbox">
+                    <i class="fas fa-user-secret"></i>
+                    {{form.username}}
+                </div>
+
+                <div class="textbox">
+                    <i class="far fa-envelope"></i>
+                    {{form.email}}
+                </div>
+            
+                <div class="textbox">
+                    <i class="fas fa-fingerprint"></i>
+                    {{form.password1}}
+                </div>
+                <div class="textbox">
+                    {{form.password2}}
+                </div>
+                <!-- Make a nice looking format -->
+                {{form.errors}}
+                <!-- ----------------------------- -->
+            
+                <input class="btn" type="submit" value="Create an account">
+            
+                <div class="signup_link">
+                    Already have an account? <a href="{%url 'login'%}">Login</a>
+                </div>
+            </form>
+        </div>
+        <script>    
+        var form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder='Username..';
+        form_fields[2].placeholder='Email..';
+        form_fields[3].placeholder='Enter password...';
+        form_fields[4].placeholder='Re-enter Password...';
+
+
+        for (var field in form_fields){	
+            form_fields[field].className += ' form-control'
+        }
+    </script>
+    </body>
+</html>
