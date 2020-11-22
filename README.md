@@ -7,7 +7,7 @@
 
 ## Website link
 
-[click](https://pazcal-b.herokuapp.com)
+[click](https://noxus-project.herokuapp.com)
 
 ## Description 
              
