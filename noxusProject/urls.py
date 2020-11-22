@@ -6,5 +6,4 @@ urlpatterns = [
     path('<str:role>',views.index, name = "index-role"),
     path("champion/<str:champion_name>" , views.detail, name = 'detail'),
     path("contact/",views.contact, name= "contact")
-
 ]
