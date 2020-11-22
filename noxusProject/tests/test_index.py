@@ -7,5 +7,5 @@ class IndexPageTest(TestCase) :
     
     def test_index_page_responsed(self):
         """test the index page could responsed."""
-        response = self.client.get(reverse('noxusProject:index'))
+        response = self.client.get(reverse('index'))
         self.assertEqual(response.status_code, 200)
