@@ -69,13 +69,14 @@ body{
 	padding:0 15px;
 }
 .team-section .team-items .item .inner .info{
-	background-color:#fff;
+	background-color:#000;
 	text-align: center;
 	padding: 20px 15px;
 	border-radius:8px;
 	transition: all .5s ease;
 	margin-top: -40px;
 }
+
 .team-section .team-items .item:hover  .info{
     transform: translateY(-20px);
 }

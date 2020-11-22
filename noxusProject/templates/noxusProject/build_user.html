@@ -3,7 +3,7 @@
 {% block content %}
 <!------------------------------------------------------------------------------------->
 {% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/index_style.css' %}">
+<link rel="stylesheet" href="{% static 'noxusProject/build_user.css' %}">
 {%if build %}
 <div class="container">
   <!-- make the for loop of django -->
@@ -15,7 +15,7 @@
    {%endfor%}
 </div>
 {%else%}
-<h1>Has no build yet</h1>
+<h1 href="{%url 'build_create' %}">Create My Build</h1>
 {%endif%}
 <!------------------------------------ base site ---------------------------------------->
 {% endblock %}  

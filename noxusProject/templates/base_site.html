@@ -6,6 +6,8 @@
 <html>
 <body>
 
+  <div class="beta">Demo version. Not indicative of final product.</div>
+
   <div class="dropdown">
     <button class="Menubtn">☰</button>
       <div class="dropdown-menu">
@@ -25,7 +27,7 @@
     {% if user.is_authenticated %}
     <a>{{user.username}}</a>
     {%else%}
-    <a>Welcome</a>
+    <a>Welcome to Noxus</a>
     {%endif%}
   </div>
   {% block content %} {% endblock %}
