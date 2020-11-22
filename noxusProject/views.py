@@ -48,3 +48,14 @@ def detail(request, champion_name):
     return HttpResponse(render(request,'noxusProject/detail.html',context))
 
 
+
+def search(request,champion_name):
+    champion  = Champion.objects.get(name=champion_name)
+    context = {'champ':champion}
+    return HttpResponse(render(request,'noxusProject/search.html',context))
+
+def contact(request):
+    return HttpResponse(render(request,'noxusProject/contact.html'))
+    
+
+

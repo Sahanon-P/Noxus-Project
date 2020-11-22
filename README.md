@@ -5,6 +5,10 @@
 
    -- ***By my hand will NOXUS rise*** --
 
+## Website link
+
+[click](https://pazcal-b.herokuapp.com)
+
 ## Description 
              
    - A web-application providing analytical insights of the game “League of Legends” such as win rates, most played builds and most used characters presented in a way of data visualization to make users be able easily understand the complex in-game data and utilize the information they gained to make somewhat beneficial decisions in their gameplays whether they be pro-players or beginners.
@@ -147,6 +151,7 @@ Signing in is not necessary to view our website, unless the user wants to subscr
 
 **Code Review Procedure** --> [here](../..wiki/Procedure)
 
+
 ## Installation Guide for local running server
 1. Clone this repository
 In your directory type this command.    
@@ -157,23 +162,5 @@ in order to migrate all the module that use in this webapp.
 3. Our webapp use external data from website so in order to make the webapp run correctly you need to read and save data from our sources.    
 	- In the project directory please type this command.    
 
-	   `python manage.py shell`    
-	   For database saving.    
-
-	- After you get into the shell please type this commands. 
-
-	   `exec(open("update.py").read())`    
-	   This will take you a few minutes depends on your internet connection.  
-
-	- Then please type these 3 commands as order.    
-
-	   ```
-	   exec(open("items_update.py").read())  
-	   exec(open("rune_update.py").read()) 
-	   exec(open("update_summonner_spell.py").read())    
-	   ```
-
-	- Then you can type `python manage.py runserver` to see our webapp.    
-	  You can type the port number as you like after the `runserver` command.    
-	  For example.  
-	  `python manage.py runserver 9000 `
+	   `python manage.py loaddata data.json`
+After typing this command you can use our webapp.

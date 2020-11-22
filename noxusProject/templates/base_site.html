@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 {% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/indexstyle.css' %}">
+<link rel="stylesheet" href="{% static 'noxusProject/base_style.css' %}">
 
 <html>
 <body style="background-color:#46494B;">
@@ -10,9 +10,9 @@
     <button class="Menubtn">☰</button>
 
       <div class="dropdown-menu">
-        <a href="">Home</a>
+        <a href="{%url 'index' %}">Home</a>
         <a href="">My Build</a>
-        <a href="">Contact Us</a>
+        <a href="{%url 'contact' %}">Contact Us</a>
       </div>
       
   </div>
@@ -22,6 +22,9 @@
       <button class="searchButton" href="#"></button>
     </div>
   </form>
+  <!-- <script type="text/javascript ">
+    document.getElementById("search_id").value = "{{query}}"
+  </script> -->
 
   {% block content %} {% endblock %}
 
@@ -42,3 +45,4 @@
 
 </body>
 </html>
+
