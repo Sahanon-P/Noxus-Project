@@ -5,12 +5,13 @@ body {
     font-family: Georgia, serif;
     font-style: normal;
     font-size: 400;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('https://images8.alphacoders.com/844/844396.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images8.alphacoders.com/844/844396.jpg');
     /* background-image: url('https://images7.alphacoders.com/983/983615.jpg'); darius */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
+
 
 /*--------------- Menu Bar ---------------*/
 
