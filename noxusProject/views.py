@@ -43,3 +43,7 @@ def search(request,champion_name):
     context = {'champ':champion}
     return HttpResponse(render(request,'noxusProject/search.html',context))
 
+def contact(request):
+    return HttpResponse(render(request,'noxusProject/contact.html'))
+    
+
