@@ -1,4 +1,61 @@
 
+/*--------------- Search Bar ---------------*/
+
+.searchBox {
+    position: absolute;
+    margin-top: -5%;
+    right: 1%;
+    transform:  translate(0%,100%);
+    background: #D2B55B;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px;
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+    /* background: white; */
+}
+
+.searchButton {
+    /* background-image: url('https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png'); */
+    border-style: none;
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
 /*--------------- Champion Menu Bar ---------------*/
 
 #mySidenav a {
@@ -10,7 +67,7 @@
     width: 60px;
     text-decoration: none;
     font-size: 20px;
-    background: whitesmoke;
+    background: #111;
     border-radius: 0 50% 50% 0;
   }
 
@@ -31,6 +88,7 @@
     background-size: cover;
     border-radius: 50%;
 }
+
 
 .all-icon:hover {
     background-image: url('https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-clash/global/default/icon-position-unselected-hover.png');
@@ -131,7 +189,7 @@
 .container {
     position: absolute;
     width: 80%;
-    margin-top: 50px;
+    margin-top: 5%;
     margin-left: 12%;
     /* margin-bottom: 200px; */
 }
@@ -149,10 +207,12 @@
     width: 140px;
     margin-left: 14%;
     background-size: cover;
+    box-shadow: 0 0 75px 1px black inset;
 }
 
 .picture:hover {
-    /*add later*/
+    box-shadow: 0 0 10px 1px #D2B55B;
+    transition: 0.2s;
 }
 
 .text{
@@ -160,9 +220,5 @@
     margin-left: 20px;
     text-align: center;
     color: white;
+    text-decoration: none;
 }
-
-.text:hover {
-    /*add later*/
-}
-
