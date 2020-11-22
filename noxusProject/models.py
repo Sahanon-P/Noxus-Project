@@ -102,6 +102,8 @@ class Champion(models.Model):
     support = models.BooleanField(default=False)
     def __str__(self):
         return self.name
+    def lower(self):
+        return self.name.lower()
 
 class SummonnerSpell(models.Model):
     """Set image and name of summonner spell."""
