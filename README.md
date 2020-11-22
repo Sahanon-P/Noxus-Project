@@ -5,6 +5,10 @@
 
    -- ***By my hand will NOXUS rise*** --
 
+## Website link
+
+[click](https://pazcal-b.herokuapp.com)
+
 ## Description 
              
    - A web-application providing analytical insights of the game “League of Legends” such as win rates, most played builds and most used characters presented in a way of data visualization to make users be able easily understand the complex in-game data and utilize the information they gained to make somewhat beneficial decisions in their gameplays whether they be pro-players or beginners.
@@ -146,6 +150,7 @@ Signing in is not necessary to view our website, unless the user wants to subscr
 **Code Review Checklist** --> [here](../../wiki/Checklist)
 
 **Code Review Procedure** --> [here](../..wiki/Procedure)
+
 
 ## Installation Guide for local running server
 1. Clone this repository
