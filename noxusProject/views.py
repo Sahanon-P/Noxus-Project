@@ -26,12 +26,19 @@ def index(request,role=""):
         context['champion'] = Champion.objects.filter(support = True).all()
     else:
         context['champion'] = Champion.objects.all()
-    query = request.GET.get('search')
-    try:
+    if request.GET:
+        query = request.GET.get("search")
+        all_champ = Champion.objects.all()
+        querylist = query.split(" ")
+        for x in all_champ:
+            for i in range(len(querylist)):
+                if (querylist[i].lower() == x.lower()):
+                    try:
+                        return search(request,x)
+                    except ItemChampion.DoesNotExist:
+                        return HttpResponse(render(request,'noxusProject/error.html'))
         if query:
-            return search(request,query)
-    except Champion.DoesNotExist:
-        return HttpResponse(render(request,'noxusProject/error.html'))
+            return HttpResponse(render(request,'noxusProject/error.html'))
     return HttpResponse(render(request,'noxusProject/index.html',context))
 
 def detail(request, champion_name):
