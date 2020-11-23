@@ -1,0 +1,19 @@
+.container {
+    margin-top: 10%;
+}
+
+h1 {
+    color: white;
+}
+
+.button {
+    text-decoration: none;
+    color: #D2B55B;
+    font-size: 20px;
+    background-color: #111;
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #D2B55B;
+}

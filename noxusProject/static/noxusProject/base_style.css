@@ -5,6 +5,19 @@ body {
     font-family: Georgia, serif;
     font-style: normal;
     font-size: 400;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://images8.alphacoders.com/844/844396.jpg');
+    /* background-image: url('https://images7.alphacoders.com/983/983615.jpg'); darius */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.beta {
+    position: absolute;
+    text-align: center;
+    left: 42.5%;
+    top: 2%;
+    color: white;
 }
 
 /*--------------- Menu Bar ---------------*/
@@ -17,7 +30,7 @@ body {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color:black;
+    background-color: #D2B55B;
     min-width: 140px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -25,7 +38,8 @@ body {
   }
 
 .dropdown-menu a {
-    color: whitesmoke;
+    color: black;
+    font-size: 17px;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -36,87 +50,36 @@ body {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    color: black;
+    color: #D2B55B;
     padding: 10px 15px;
     border: none;
     background-color: transparent;
 }
 
 .dropdown-menu a:hover {
-    color: black;
-    background-color: whitesmoke;
+    color: #D2B55B;
+    background-color: #111;
 }
 
 .dropdown:hover .dropdown-menu {display: block;}
 
 .dropdown:hover .Menubtn {color: whitesmoke;}
 
-/*--------------- Search Bar ---------------*/
+/*--------------- side-username ---------------*/
 
-.searchBox {
+.userstatus {
+    text-decoration: none;
+    font-size: 17px;
     position: absolute;
-    top: -5%;
-    right: 2%;
-    transform:  translate(0%,100%);
-    background: #2f3640;
-    height: 40px;
-    border-radius: 40px;
-    padding: 10px;
-
-}
-
-.searchBox:hover > .searchInput {
-    width: 240px;
-    padding: 0 6px;
-}
-
-.searchBox:hover > .searchButton {
-  background: white;
-  color : #2f3640;
-}
-
-.searchButton {
-    color: white;
-    float: right;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #2f3640;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-}
-
-.searchInput {
-    border:none;
-    background: none;
-    outline:none;
-    float:left;
-    padding: 0;
-    color: white;
-    font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
-
-}
-
-@media screen and (max-width: 620px) {
-.searchBox:hover > .searchInput {
-    width: 150px;
-    padding: 0 6px;
-}
-}
-
-/*--------------- footer ---------------*/
-
-#footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100px;
-    background: #222;
-    transition: 0.3s;
+    color: black;
+    text-decoration: none;
+    /* writing-mode: vertical-rl; */
+    /* text-orientation: mixed; */
+    left: 10%;
+    top: 0%;
+    background-color: #D2B55B;
+    /* border-radius: 20%; */
+    padding: 12.5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }

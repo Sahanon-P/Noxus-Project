@@ -2,6 +2,8 @@
 {% extends 'base_site.html' %}
 {% block content %}
 <!------------------------------------------------------------------------------------->
+{% load static %}
+<link rel="stylesheet" href="{% static 'noxusProject/error.css' %}">
 <style>
 .container{
     text-align: center;
@@ -10,7 +12,7 @@
 
 <div class="container">
     <img src ="https://static.wikia.nocookie.net/leagueoflegends/images/5/57/LoR_OMG_Emote.png/revision/latest/scale-to-width-down/512?cb=20200429082248" width="200px" height="200px">
-    <h1>Champion Not Found!!</h1>
-    <button><a href="{% url 'index' %}">{{"Return to home"}}</a></button>
+    <h1>Champion Not Found!</h1>
+    <a href="{% url 'index' %}" class="button">{{"Back"}}</a>
 </div>
 {% endblock %}

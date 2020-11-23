@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html>
+<!------------------------------------ base site ---------------------------------------->
+{% extends 'base_site.html' %}
+{% block content %}
+<!------------------------------------------------------------------------------------->
     <head>
         <meta charset="utf-8">
         <title>Sign Up</title>
         {% load static %}
-        <link rel="stylesheet" href="{%static 'noxusProject/sign_up.css'%}">
+        <link rel="stylesheet" href="{%static 'noxusProject/sign_up_style.css'%}">
         <script src="https://kit.fontawesome.com/5f2d2f1537.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="login">
-            <h1>Create Account</h1>
+            <h1>Sign up</h1>
             <form method="POST">
                 {%csrf_token%}
                 <div class="textbox">
@@ -36,7 +38,7 @@
                 <input class="btn" type="submit" value="Create an account">
             
                 <div class="signup_link">
-                    Already have an account? <a href="{%url 'login'%}">Login</a>
+                    Already have an account? <a href="{%url 'login'%}">Sign in</a>
                 </div>
             </form>
         </div>
@@ -53,4 +55,5 @@
         }
     </script>
     </body>
-</html>
+<!------------------------------------ base site ---------------------------------------->
+{% endblock %}  

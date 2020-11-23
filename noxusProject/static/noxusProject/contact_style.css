@@ -2,14 +2,14 @@
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 body{
 	margin:0;
-	font-family: 'Open Sans', sans-serif;
+	/* font-family: 'Open Sans', sans-serif; */
 }
 *{
 	box-sizing: border-box;
 }
 
 .team-section{
-	background-color:#333333;
+	/* background-color:#333333; */
 	min-height: 100vh;
 	padding:70px 15px 30px;
 }
@@ -28,21 +28,20 @@ body{
 	flex-basis: 100%;
 	max-width: 100%;
 	margin-bottom: 70px;
+	color: #fff;
 }
 
 .team-section .section-title h1{
 	font-size: 40px;
 	text-align: center;
 	margin:0;
-	color: #ffffff;
 	font-weight: 700;
 }
 
-.team-section .section-title p{
+.team-section .section-title h3{
 	font-size:16px;
 	text-align: center;
 	margin:15px 0 0;
-	color:#ffffff;
 }
 .team-section .team-items{
 	
@@ -53,10 +52,10 @@ body{
 	justify-content: space-around;
 }
 .team-section .team-items .item{
- flex-basis: calc(30% - 30px);
- max-width: calc(20% - 30px);
- transition: all .5s ease;
- margin-bottom: 40px;
+	flex-basis: calc(30% - 30px);
+	max-width: calc(20% - 30px);
+	transition: all .5s ease;
+	margin-bottom: 40px;
 }
 .team-section .team-items .item img{
 	display: block;
@@ -70,13 +69,14 @@ body{
 	padding:0 15px;
 }
 .team-section .team-items .item .inner .info{
-	background-color:#505050;
+	background-color:#000;
 	text-align: center;
 	padding: 20px 15px;
 	border-radius:8px;
 	transition: all .5s ease;
 	margin-top: -40px;
 }
+
 .team-section .team-items .item:hover  .info{
     transform: translateY(-20px);
 }
@@ -92,24 +92,40 @@ body{
 .team-section .team-items .item .inner .info p{
 	font-size: 16px;
 	font-weight: 400;
-	color:#c5c5c5;
+	color:#000;
 	margin:10px 0 0;
 }
 
 .team-section .team-items .item .inner .info .social-links{
+	text-decoration: none;
 	padding-top: 15px;
 }
 
 .team-section .team-items .item .inner .info .social-links a{
+	color: #fff;
 	display: inline-block;
 	height: 32px;
 	width: 32px;
-	background-color: #ffffff;
+	background-color: #1046a9;
 	border-radius: 50%;
 	margin:0 2px;
 	text-align: center;
 	line-height: 32px;
-	font-size:16px;
+	font-size:17.5px;
+	transition: all .5s ease;
+}
+
+.team-section .team-items .item .inner .info .social-links b{
+	color: #fff;
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	background-color: #353535;
+	border-radius: 50%;
+	margin:0 2px;
+	text-align: center;
+	line-height: 32px;
+	font-size:17.5px;
 	transition: all .5s ease;
 }
 
