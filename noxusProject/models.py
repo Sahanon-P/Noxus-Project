@@ -92,7 +92,7 @@ class Champion(models.Model):
     def __str__(self):
         return self.name
     def lower(self):
-        return self.lower()
+        return self.name.lower()
 
 class SummonnerSpell(models.Model):
     name = models.CharField(max_length = 200, null=True)
