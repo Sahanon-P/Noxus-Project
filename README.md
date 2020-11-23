@@ -1,8 +1,6 @@
 # Noxus-Project
 ## League’s Insights
 
-![Noxus](darius-god-king.jpg)
-
    -- ***By my hand will NOXUS rise*** --
 
 ## Website link
