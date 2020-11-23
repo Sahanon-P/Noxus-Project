@@ -63,3 +63,7 @@
 .signup_link a:hover {
     text-decoration: underline;
 }
+
+#messages {
+    color: red;
+}
