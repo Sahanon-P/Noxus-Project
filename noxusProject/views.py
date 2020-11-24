@@ -35,7 +35,7 @@ def index(request,role=""):
         for x in all_champ:
             for i in range(len(querylist)):
                 # for user quality of life Ex.(user search "A" >> it will show all champ start with "A")
-                if (x.lower().__contains__(querylist[i].lower())): 
+                if (x.capital().__contains__(querylist[i].capitalize())): 
                     return search(request,querylist[i])
         if query:
             return HttpResponse(render(request,'noxusProject/error.html'))

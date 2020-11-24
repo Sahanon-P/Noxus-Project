@@ -91,8 +91,8 @@ class Champion(models.Model):
     support = models.BooleanField(default=False)
     def __str__(self):
         return self.name
-    def lower(self):
-        return self.name.lower()
+    def capital(self):
+        return self.name.capitalize()
 
 class SummonnerSpell(models.Model):
     name = models.CharField(max_length = 200, null=True)
