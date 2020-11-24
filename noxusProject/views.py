@@ -32,11 +32,9 @@ def index(request,role=""):
         querylist = query.split(" ")
         for x in all_champ:
             for i in range(len(querylist)):
-                if (querylist[i].lower() == x.lower()):
-                    try:
-                        return search(request,x)
-                    except ItemChampion.DoesNotExist:
-                        return HttpResponse(render(request,'noxusProject/error.html'))
+                # for user quality of life Ex.(user search "A" >> it will show all champ start with "A")
+                if (x.lower().__contains__(querylist[i].lower())): 
+                    return search(request,querylist[i])
         if query:
             return HttpResponse(render(request,'noxusProject/error.html'))
     return HttpResponse(render(request,'noxusProject/index.html',context))
@@ -53,10 +51,9 @@ def detail(request, champion_name):
     }
     return HttpResponse(render(request,'noxusProject/detail.html',context))
 
-
 def search(request,champion_name):
-    champion  = Champion.objects.get(name=champion_name)
-    context = {'champ':champion}
+    context = {}
+    context['champion'] = Champion.objects.filter(name__startswith=champion_name)
     return HttpResponse(render(request,'noxusProject/search.html',context))
 
 def contact(request):
