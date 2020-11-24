@@ -3,14 +3,16 @@
 {% block content %}
 <!------------------------------------------------------------------------------------->
 {% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/index_style.css' %}">
+<link rel="stylesheet" href="{% static 'noxusProject/index.css' %}">
 
 <div class="container">
   <!-- make the for loop of django -->
+  {%for champ in champion %}
   <div class="box">
     <a href="champion/{{champ.name}}"><div class="picture" style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{champ.name}}_0.jpg)"></div></a>
     <a href="champion/{{champ.name}}"><div class="text">{{champ.name}}</div></a>
   </div>
+  {% endfor %}
 </div>
 
 <!------------------------------------ base site ---------------------------------------->
