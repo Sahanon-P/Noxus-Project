@@ -30,6 +30,8 @@ def index(request,role=""):
         query = request.GET.get("search")
         all_champ = Champion.objects.all()
         querylist = query.split(" ")
+        if not query.isalpha():
+            return redirect("index")
         for x in all_champ:
             for i in range(len(querylist)):
                 # for user quality of life Ex.(user search "A" >> it will show all champ start with "A")
