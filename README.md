@@ -169,3 +169,8 @@ in order to migrate all the module that use in this webapp.
 
 	   `python manage.py loaddata data.json`
 After typing this command you can use our webapp.
+4. You can use demo user to see through our authenticated features    
+	```
+	username = TestUser
+	password = samplepassword1234
+	```

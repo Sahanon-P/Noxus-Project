@@ -3,7 +3,7 @@
 {% block content %}
 <!------------------------------------ load stylesheet ---------------------------------------->
 {% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/detail_style.css' %}">
+<link rel="stylesheet" href="{% static 'noxusProject/detail.css' %}">
 
 
 <!------------------------------------ contents ----------------------------------------------->
@@ -42,32 +42,24 @@
   <div class="starting">
     <div class="text">Start items<br></div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.starter1.img}}');">
-        <span class="hover">{{champion.starter1.description}}</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.starter2.img}}');">
-        <span class="hover">{{champion.starter2.description}}</span>
       </div>
   </div>
 <!------------------------------------ full items --------------------------------------------->
   <div class="fullitems">
     <div class="text">Full Build<br></div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_1.img}}');">
-        <span class="hover">{{champion.items_1.description}}</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_2.img}}');">
-        <span class="hover">{{champion.items_2.description}}</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_3.img}}');">
-        <span class="hover">{{champion.items_3.description}}</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_4.img}}');">
-        <span class="hover">{{champion.items_4.description}}</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_5.img}}');">
-        <span class="hover">{{champion.items_5.description}}</span>
       </div>
       <div class="square_icon" style="background-image: url('http://ddragon.leagueoflegends.com/cdn/10.23.1/img/item/{{champion.items_6.img}}');">
-        <span class="hover">{{champion.items_6.description}}</span>
       </div>
   </div>
 </div>
