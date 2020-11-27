@@ -3,13 +3,16 @@
 
 .searchBox {
     position: absolute;
-    margin-top: -5%;
+    margin-top: -6.75%;
     right: 1%;
     transform:  translate(0%,100%);
-    background: #D2B55B;
+    background: #222;
     height: 40px;
     border-radius: 40px;
     padding: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #D2B55B;
 }
 
 .searchBox:hover > .searchInput {
@@ -18,22 +21,24 @@
 }
 
 .searchBox:hover > .searchButton {
-    /* background: white; */
+    background: white;
 }
 
 .searchButton {
     /* background-image: url('https://cdn2.iconfinder.com/data/icons/font-awesome/1792/search-512.png'); */
     border-style: none;
-    color: white;
+    /* color: white; */
     float: right;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #111;
+    background: #D2B55B;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.1s;
+    border-width: 5px;
+    border-color: transparent;
 }
 
 .searchInput {
@@ -42,13 +47,21 @@
     outline:none;
     float:left;
     padding: 0;
-    color: black;
+    color: #D2B55B;
     font-size: 16px;
     transition: 0.4s;
     line-height: 40px;
     width: 0px;
 }
 
+.searchButton a{
+    font-size: 20px;
+    text-align: center;
+    color: #111;
+}
+.fa-search {
+    text-decoration: none;
+}
 @media screen and (max-width: 620px) {
 .searchBox:hover > .searchInput {
     width: 150px;
@@ -73,6 +86,7 @@
 
 #mySidenav a:hover {
     left: 0px;
+    background-color: #555;
 }
 
 #all {
@@ -208,11 +222,26 @@
     margin-left: 14%;
     background-size: cover;
     box-shadow: 0 0 75px 1px black inset;
+
+    /* Inner Shadow */
+	border-color: transparent;
+	border-radius: 7.5px;
+    /* box-shadow: 0 0 75px 25px black inset; */
+    
+    /* Magnifying section */
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
 .picture:hover {
-    box-shadow: 0 0 10px 1px #D2B55B;
+    box-shadow: 0 0 10px 1px #111;
     transition: 0.2s;
+
+    /* Magnifying section */
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .text{
