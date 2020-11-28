@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .models import *
 from django.contrib import messages
-from .forms import CreateUserForm
+from .forms import CreateUserForm, BuildForm
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -99,44 +99,14 @@ def logoutPage(request):
 
 class BuildCreate(LoginRequiredMixin,CreateView):
     model = Build
-    fields = ['build_name', 'champion','starter1','starter2',
-    'items_1',
-    'items_2',
-    'items_3',
-    'items_4',
-    'items_5',
-    'items_6',
-    'spell1',
-    'spell2',
-    'key_stone', 
-    'row1',
-    'row2',
-    'row3',
-    'sub_row1',
-    'sub_row2',
-    ]
+    form_class = BuildForm
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
 class BuildUpdate(UpdateView,UserPassesTestMixin,LoginRequiredMixin):
     model = Build
-    fields = ['build_name', 'champion','starter1','starter2',
-    'items_1',
-    'items_2',
-    'items_3',
-    'items_4',
-    'items_5',
-    'items_6',
-    'spell1',
-    'spell2',
-    'key_stone', 
-    'row1',
-    'row2',
-    'row3',
-    'sub_row1',
-    'sub_row2',
-    ]
+    form_class = BuildForm
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
