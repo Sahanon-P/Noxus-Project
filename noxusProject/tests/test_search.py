@@ -1,6 +1,6 @@
 from django.test import TestCase
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.FireFox.options import Options
 
 class SearchTest(TestCase) :
     """Testing search bar."""
@@ -10,7 +10,7 @@ class SearchTest(TestCase) :
 
         option = Options()
         option.headless = True
-        driver = webdriver.Chrome(options=option)
+        driver = webdriver.Firefox(options=option)
         driver.get("https://noxus-project.herokuapp.com/?search=Aatrox")
         links = driver.find_element_by_class_name("container")
         links2 = links.find_element_by_class_name("box")

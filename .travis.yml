@@ -8,13 +8,11 @@ git:
   depth: 1
 
 
-dist: xenial
+env:
+  global:
+    - MOZ_HEADLESS=1
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+  firefox: latest
 
 install:
   - pip install coverage
