@@ -1,6 +1,6 @@
 from django.test import TestCase
 from selenium import webdriver
-from selenium.webdriver.FireFox.options import Options
+from selenium.webdriver.fireFox.options import Options
 
 class DetailPageTest(TestCase) :
     """Testing detail page and detail user page."""
