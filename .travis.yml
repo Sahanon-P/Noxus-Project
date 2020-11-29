@@ -22,9 +22,9 @@ install:
   - pip install django-heroku
   - pip install gunicorn
   - pip install selenium
+  - python manage.py collectstatic
 # script to run tests. Script can have many commands, one per line.
 script: 
   - coverage run --source='.' manage.py test
-  - python manage.py loadstatic staticfiles
 after_script:
   - bash <(curl -s https://codecov.io/bash)
