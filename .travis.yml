@@ -10,7 +10,6 @@ git:
 install:
   - pip install coverage
   - pip install django
-  - pip install django-heroku
   - pip install gunicorn
   - python manage.py collectstatic
 # script to run tests. Script can have many commands, one per line.
