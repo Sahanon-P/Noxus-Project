@@ -1,6 +1,6 @@
 from django.test import TestCase
 from selenium import webdriver
-
+from selenium.webdriver.chrome.options import Options
 
 class SearchTest(TestCase) :
     """Testing search bar."""
@@ -8,8 +8,8 @@ class SearchTest(TestCase) :
     def test_search_bar(self):
         """test search bar efficeincy as mush as possible."""
 
-        option = webdriver.ChromeOptions()
-        option.add_argument("headless")
+        option = Options()
+        option.headless = True
         driver = webdriver.Chrome(options=option)
         driver.get("https://noxus-project.herokuapp.com/?search=Aatrox")
         links = driver.find_element_by_class_name("container")

@@ -8,8 +8,8 @@ class DetailPageTest(TestCase) :
     def test_detail_page(self):
         """test detail page that redirect from index page."""
         
-        option = webdriver.ChromeOptions()
-        option.add_argument("headless")
+        option = Options()
+        option.headless = True
         driver = webdriver.Chrome(options=option)
         driver.get("https://noxus-project.herokuapp.com/champion/Fizz")
         link = driver.find_element_by_class_name("grid-container")
