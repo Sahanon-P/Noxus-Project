@@ -158,19 +158,91 @@ Django==3.1.2
 django-heroku==0.3.1
 gunicorn==20.0.4
 ```
-1. Clone this repository
-In your directory type this command.    
-`git clone https://github.com/Sahanon-P/Noxus-Project.git`    
-2. After you clone the repository, In the project directory please type this command    
-` python manage.py migrate `    
-in order to migrate all the module that use in this webapp.    
-3. Our webapp use external data from website so in order to make the webapp run correctly you need to read and save data from our sources.    
-	- In the project directory please type this command.    
 
-	   `python manage.py loaddata data.json`
-After typing this command you can use our webapp.
-4. You can use demo user to see through our authenticated features    
-	```
-	username = TestUser
-	password = samplepassword1234
-	```
+</p>
+  </details>
+ 
+### Install required modules
+<details>
+  <summary> here </summary>
+  <p> 
+  
+#### Upgrade pip to the lastest version   
+- Windows
+```shell
+python -m pip install --upgrade pip
+```
+- Linux/MacOS
+```shell
+python3 -m pip install --upgrade pip
+```
+
+#### Install Django
+- Windows
+```shell
+python -m pip install django==3.1.2
+```
+- Linux/MacOS
+```shell
+python3 -m pip install django==3.1.2
+```
+
+#### Install Gunicorn
+- Windows
+```shell
+python -m pip install gunicorn==20.0.4
+```
+- Linux/MacOS
+```shell
+python3 -m pip install gunicorn==20.0.4
+```
+
+#### Install Django-Heroku
+- Windows
+```shell
+python -m pip install django-heroku==0.3.1
+```
+- Linux/MacOS
+```shell
+python3 -m pip install django-heroku==0.3.1
+```
+
+  </p>
+</details>
+
+### Get started    
+#### Clone this repository
+In your directory type this command.    
+```shell
+$ git clone https://github.com/Sahanon-P/Noxus-Project.git  
+```
+
+#### Migrate the installed app
+After you clone the repository, In the project directory please type this command    
+- Windows
+```shell
+python manage.py migrate
+```
+- Linux/MacOS
+```shell
+python3 manage.py migrate
+``` 
+
+#### Load fixtures to the database
+Our webapp use external data from website so in order to make the webapp run correctly you need to read and save data from our sources.      
+
+- Windows
+```shell
+python manage.py loaddata data.json
+```
+- Linux/MacOS
+```shell
+python3 manage.py loaddata data.json
+``` 
+
+#### Additional
+You can use demo user to see through our authenticated features    
+```
+username = TestUser
+password = samplepassword1234
+```
