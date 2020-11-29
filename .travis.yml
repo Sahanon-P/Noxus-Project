@@ -7,23 +7,12 @@ python: "3.8"
 git:
   depth: 1
 
-
-env:
-  global:
-    - MOZ_HEADLESS=1
-addons:
-  firefox: latest
-
 install:
   - pip install coverage
   - pip install django
   - pip install django-heroku
   - pip install gunicorn
-  - pip install selenium
   - python manage.py collectstatic
-  - wget https://github.com/mozilla/geckodriver/releases/download/v0.28.0/geckodriver-v0.28.0-linux64.tar.gz
-  - tar -xzf geckodriver-v0.28.0-linux64.tar.gz -C bin
-  - export PATH=$(pwd)/bin:$PATH
 # script to run tests. Script can have many commands, one per line.
 script: 
   - coverage run --source='.' manage.py test
