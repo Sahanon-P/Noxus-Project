@@ -20,6 +20,7 @@ install:
   - pip install django
   - pip install django-heroku
   - pip install gunicorn
+  - pip install selenium
 # script to run tests. Script can have many commands, one per line.
 script: 
   - coverage run --source='.' manage.py test
