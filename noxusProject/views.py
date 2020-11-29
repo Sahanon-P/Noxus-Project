@@ -13,6 +13,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 # Create your views here.
 def index(request,role=""):
+    """Index page showed by filter roll and can search the champion"""
+
     context = {}
     if role == "top":
         context['champion'] = Champion.objects.filter(top = True).all()
@@ -42,6 +44,8 @@ def index(request,role=""):
     return HttpResponse(render(request,'noxusProject/index.html',context))
 
 def detail(request, champion_name):
+    """Detail page show the best build of that champion."""
+
     champion  = Champion.objects.get(name=champion_name)
     item_champion = ItemChampion.objects.get(name = champion_name)
     rune_champion = RuneChampion.objects.get(name = champion_name)
@@ -54,14 +58,20 @@ def detail(request, champion_name):
     return HttpResponse(render(request,'noxusProject/detail.html',context))
 
 def search(request,champion_name):
+    """Searching the champion name by filter the character in their name."""
+
     context = {}
     context['champion'] = Champion.objects.filter(name__startswith=champion_name)
     return HttpResponse(render(request,'noxusProject/search.html',context))
 
 def contact(request):
+    """Contact button which could redirect to contact page."""
+
     return HttpResponse(render(request,'noxusProject/contact.html'))
 
 def register(request):
+    """Register the user by enter username and password."""
+
     form = CreateUserForm()
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
@@ -74,30 +84,32 @@ def register(request):
     return HttpResponse(render(request,'noxusProject/sign_up.html',context))
 
 def loginPage(request):
-	if request.user.is_authenticated:
-		return redirect('index')
-	else:
-		if request.method == 'POST':
-			user_name = request.POST.get('username')
-			passcode =request.POST.get('password')
+    """Login page of user. After login the website will redirect to index page."""
 
-			user = authenticate(request, username=user_name, password=passcode)
-
-			if user is not None:
-				login(request, user)
-				return redirect('index')
-			else:
-				messages.info(request, 'Username OR password is incorrect')
-
-		context = {}
-		return render(request, 'noxusProject/login.html', context)
-
+    if request.user.is_authenticated:
+        return redirect('index')
+    else:
+        if request.method == 'POST':
+            user_name = request.POST.get('username')
+            passcode =request.POST.get('password')
+            user = authenticate(request, username=user_name, password=passcode)
+            if user is not None:
+                login(request, user)
+                return redirect('index')
+            else:
+                messages.info(request, 'Username OR password is incorrect')
+        context = {}
+        return render(request, 'noxusProject/login.html', context)
 
 def logoutPage(request):
-	logout(request)
-	return redirect('index')
+    """Logout page. After logout, it will redirect to index page."""
+
+    logout(request)
+    return redirect('index')
 
 class BuildCreate(LoginRequiredMixin,CreateView):
+    """Class for make the user create build."""
+
     model = Build
     fields = ['build_name', 'champion','starter1','starter2',
     'items_1',
@@ -120,6 +132,8 @@ class BuildCreate(LoginRequiredMixin,CreateView):
         return super().form_valid(form)
 
 class BuildUpdate(UpdateView,UserPassesTestMixin,LoginRequiredMixin):
+    """Update the old build to the new one."""
+
     model = Build
     fields = ['build_name', 'champion','starter1','starter2',
     'items_1',
@@ -149,6 +163,8 @@ class BuildUpdate(UpdateView,UserPassesTestMixin,LoginRequiredMixin):
 
     
 class BuildDelete(DeleteView,UserPassesTestMixin,LoginRequiredMixin):
+    """Delete the build."""
+
     model = Build
 
 def my_build(request):
@@ -160,5 +176,3 @@ def detail_build(request,name):
     champion = Build.objects.get(build_name = name)
     context = {'champion': champion}
     return HttpResponse(render(request,'noxusProject/detail_user.html',context))
-    
-
