@@ -1,6 +1,6 @@
 from django.test import TestCase
 from selenium import webdriver
-from selenium.webdriver.fireFox.options import Options
+from selenium.webdriver.firefox.options import Options
 
 class SearchTest(TestCase) :
     """Testing search bar."""
