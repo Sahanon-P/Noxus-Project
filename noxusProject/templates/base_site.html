@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 
 {% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/base_style.css' %}">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'noxusProject/base.css' %}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <html>
 <body>
-
   <div class="beta">Demo version. Not indicative of final product.</div>
 
-  <div class="dropdown">
-    <button class="Menubtn">☰</button>
-      <div class="dropdown-menu">
-        <a href="{%url 'index' %}">Home</a>
-        <a href="{%url 'contact' %}">Contact Us</a>
+  <div class="nav-bar">
+      <ul>
+        <li><a href="{%url 'index' %}">Home</a></li>
+        <li><a href="{%url 'contact' %}">Contact Us</a></li>
+
         {% if user.is_authenticated %}
-        <a href="{%url 'my_build' %}">My Build</a>
-        <a href="{%url 'build_create' %}">Create Build</a>
-        <a href="{%url 'logout' %}">Log out</a>
+          <li><a href="{%url 'my_build' %}">My Build</a></li>
+          <li><a href="{%url 'build_create' %}">Create Build</a></li>
+          <li><a href="{%url 'logout' %}">Log out</a></li>
         {%else%}
-        <a href="{%url 'login' %}">Log in</a>
+          <li><a href="{%url 'login' %}">Log in</a></li>
         {%endif%}
-      </div>
+      
+
+        <div class="search-container">
+          <form method="get">
+            <div class="searchBox">
+              <input class="searchInput" type="text" name="search" placeholder="Search Champion... (eg. Aatrox)">
+              <button class="submit"><a class="fa fa-search"></a></button>
+            </div>
+          </form>
+        </div>
+    </ul>
   </div>
 
-  <div class="userstatus">
+  <!-- <div class="userstatus">
     {% if user.is_authenticated %}
     <a>{{user.username}}</a>
     {%else%}
     <a>Welcome to Noxus</a>
     {%endif%}
-  </div>
+  </div> -->
+
   {% block content %} {% endblock %}
 
-  <div id="footer"></div>
+  <!-- <div id="footer"></div> -->
 
   <script>
     var prevScrollpos = window.pageYOffset;
