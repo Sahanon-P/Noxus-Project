@@ -5,7 +5,7 @@
 
 ## Website link
 
-[click](https://noxus-project.herokuapp.com)
+<https://noxus-project.herokuapp.com>
 
 ## Description 
              
