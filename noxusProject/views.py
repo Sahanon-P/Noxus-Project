@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from .models import *
 from django.contrib import messages
-from .forms import CreateUserForm
+from .forms import CreateUserForm, BuildForm
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -33,7 +33,7 @@ def index(request,role=""):
         all_champ = Champion.objects.all()
         querylist = query.split(" ")
         if not query.isalpha():
-            return redirect("index")
+            return HttpResponse(render(request,'noxusProject/error.html'))
         for x in all_champ:
             for i in range(len(querylist)):
                 # for user quality of life Ex.(user search "A" >> it will show all champ start with "A")
@@ -111,22 +111,7 @@ class BuildCreate(LoginRequiredMixin,CreateView):
     """Class for make the user create build."""
 
     model = Build
-    fields = ['build_name', 'champion','starter1','starter2',
-    'items_1',
-    'items_2',
-    'items_3',
-    'items_4',
-    'items_5',
-    'items_6',
-    'spell1',
-    'spell2',
-    'key_stone', 
-    'row1',
-    'row2',
-    'row3',
-    'sub_row1',
-    'sub_row2',
-    ]
+    form_class = BuildForm
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
@@ -135,22 +120,7 @@ class BuildUpdate(UpdateView,UserPassesTestMixin,LoginRequiredMixin):
     """Update the old build to the new one."""
 
     model = Build
-    fields = ['build_name', 'champion','starter1','starter2',
-    'items_1',
-    'items_2',
-    'items_3',
-    'items_4',
-    'items_5',
-    'items_6',
-    'spell1',
-    'spell2',
-    'key_stone', 
-    'row1',
-    'row2',
-    'row3',
-    'sub_row1',
-    'sub_row2',
-    ]
+    form_class = BuildForm
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
