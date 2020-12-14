@@ -7,6 +7,9 @@ python: "3.8"
 git:
   depth: 1
 
+env:
+  -DJANGO=3.1.2 DB=mysql SECRET_KEY='secret_key' DEBUG=False
+
 install:
   - pip install coverage
   - pip install django
