@@ -11,6 +11,7 @@ install:
   - pip install coverage
   - pip install django
   - pip install gunicorn
+  - pip install python-decouple
   - python manage.py collectstatic
 # script to run tests. Script can have many commands, one per line.
 script: 
