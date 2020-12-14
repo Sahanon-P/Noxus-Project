@@ -31,7 +31,7 @@ def index(request,role=""):
         all_champ = Champion.objects.all()
         querylist = query.split(" ")
         if not query.isalpha():
-            return redirect("index")
+            return HttpResponse(render(request,'noxusProject/error.html'))
         for x in all_champ:
             for i in range(len(querylist)):
                 # for user quality of life Ex.(user search "A" >> it will show all champ start with "A")
