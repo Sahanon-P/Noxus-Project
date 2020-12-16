@@ -2,7 +2,7 @@
 
 {% load static %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{% static 'noxusProject/base.css' %}">
+<link rel="stylesheet" href="{% static 'noxusProject/base-style.css' %}">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <html>
@@ -21,7 +21,8 @@
         {%else%}
           <li><a href="{%url 'login' %}">Log In <b class="fa fa-user"></b></a></li>
         {%endif%}
-        <li>
+
+        <li class="user">
           {% if user.is_authenticated %}
           <a class="admin">{{user.username}} <b class="fa fa-user"></b></a>
           {%else%}
@@ -29,14 +30,7 @@
           {%endif%}
         </li>
       
-        <div class="search-container">
-          <form method="get">
-            <div class="searchBox">
-              <input class="searchInput" type="text" name="search" placeholder="Search Champion... (eg. Aatrox)">
-              <button class="submit"><a class="fa fa-search"></a></button>
-            </div>
-          </form>
-        </div>
+        
     </ul>
   </div>
   

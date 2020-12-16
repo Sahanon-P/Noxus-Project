@@ -1,3 +1,51 @@
+/*--------------- Search Bar ---------------*/
+.search-container {
+    margin-right: 40%;
+    margin-top: 5%;
+    float: right;
+}
+
+input[type=text] {
+    padding: 7.5px;
+    margin-top: 5%;
+    font-size: 14px;
+    border-style: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 250px;
+    background-color: #333;
+    color: #D2B55B;
+    /* Inner Shadow */
+	border-color: transparent;
+    box-shadow: 0 0 5px 5px black inset;
+    
+}
+
+.search-container button {
+    float: right;
+    padding: 5.5px 12.5px;
+    margin-top: 5%;
+    margin-right: 16px;
+    background: #000;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.search-container button a{
+    color: #D2B55B;
+}
+
+/* .search-container button:hover {
+    background: #D2B55B;
+    color: #fff;
+} */
+
+.search-container button a:hover {
+    color: white;
+}
 
 /*--------------- Champion Menu Bar ---------------*/
 
@@ -133,7 +181,7 @@
 .container {
     position: absolute;
     width: 80%;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 12%;
     /* margin-bottom: 200px; */
 }

@@ -43,6 +43,10 @@ li a {
 	transition: .1s ease-in-out;
 }
 
+.user {
+    float: right;
+    margin-right: 50px;
+}
 .admin {
     border-top: 3px solid #D2B55B;
     color: #D2B55B;
@@ -74,43 +78,7 @@ li a:hover {
 	transform: scale(1.05);
 }
 
-/*--------------- Search Bar ---------------*/
-.nav-bar .search-container {
-    float: right;
-}
 
-.nav-bar input[type=text] {
-    padding: 7.5px;
-    margin-top: 5%;
-    font-size: 14px;
-    border-style: none;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    width: 250px;
-    background-color: #000;
-}
-
-.nav-bar .search-container button {
-    float: right;
-    padding: 5.5px 12.5px;
-    margin-top: 5%;
-    margin-right: 16px;
-    background: #000;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.nav-bar .search-container button a{
-    color: #D2B55B;
-}
-
-.nav-bar .search-container button:hover {
-    /* background: #ccc; */
-    color: #fff;
-}
 
 
 /*--------------- userstatus ---------------*/

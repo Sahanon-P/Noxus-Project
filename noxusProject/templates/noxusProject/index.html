@@ -3,7 +3,7 @@
 {% block content %}
 <!------------------------------------ load stylesheet ---------------------------------------->
 {% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/indexc.css' %}">
+<link rel="stylesheet" href="{% static 'noxusProject/index-style.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!------------------------------------------------------------------------------------->
 
@@ -16,7 +16,14 @@
   </div>
 </form> -->
 
-
+<div class="search-container">
+  <form method="get">
+    <div class="searchBox">
+      <input class="searchInput" type="text" name="search" placeholder="Search Champion... (eg. Aatrox)">
+      <button class="submit"><a class="fa fa-search"></a></button>
+    </div>
+  </form>
+</div>
 
 <div id="mySidenav">
   <a href= "all" id="all"><div class="all-icon"></div></a>
