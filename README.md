@@ -1,4 +1,5 @@
 # Noxus-Project
+[![Build Status](https://travis-ci.com/Sahanon-P/Noxus-Project.svg?branch=master)](https://travis-ci.com/Sahanon-P/Noxus-Project) [![codecov](https://codecov.io/gh/Sahanon-P/Noxus-Project/branch/main/graph/badge.svg?token=9E9RDXQ58A)](https://codecov.io/gh/Sahanon-P/Noxus-Project)
 ## League’s Insights
 
    -- ***By my hand will NOXUS rise*** --
