@@ -1,0 +1,23 @@
+language: python
+
+# you can use Python 3.7 instead
+python: "3.8"
+
+# don't clone more than necessary
+git:
+  depth: 1
+
+env:
+  -DJANGO=3.1.2 DB=mysql SECRET_KEY='secret_key' DEBUG=False
+
+install:
+  - pip install coverage
+  - pip install django
+  - pip install gunicorn
+  - pip install python-decouple
+  - python manage.py collectstatic
+# script to run tests. Script can have many commands, one per line.
+script: 
+  - coverage run --source='.' manage.py test
+after_script:
+  - bash <(curl -s https://codecov.io/bash)

@@ -136,13 +136,25 @@ class BuildDelete(DeleteView,UserPassesTestMixin,LoginRequiredMixin):
     """Delete the build."""
 
     model = Build
+    success_url = "/build/"
+    def test_func(self):
+        build = self.get_object()
+        if self.request.user == build.user:
+            return True
+        return False
 
 def my_build(request):
-    champion = Build.objects.filter(user = request.user)
-    context = {'build': champion}
-    return HttpResponse(render(request,'noxusProject/build_user.html',context))
+    if request.user.is_authenticated:
+        champion = Build.objects.filter(user = request.user)
+        context = {'build': champion}
+        return HttpResponse(render(request,'noxusProject/build_user.html',context))
+    else:
+        return redirect('index')
     
 def detail_build(request,name):
-    champion = Build.objects.get(build_name = name)
-    context = {'champion': champion}
-    return HttpResponse(render(request,'noxusProject/detail_user.html',context))
+    if request.user.is_authenticated:
+        champion = Build.objects.get(build_name = name)
+        context = {'champion': champion}
+        return HttpResponse(render(request,'noxusProject/detail_user.html',context))
+    else:
+        return redirect('index')
