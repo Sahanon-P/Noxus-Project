@@ -12,14 +12,6 @@ body {
     background-attachment: fixed;
 }
 
-.beta {
-    position: absolute;
-    text-align: center;
-    left: 42.5%;
-    top: 1%;
-    color: white;
-}
-
 /*--------------- Menu Bar ---------------*/
 ul {
     list-style-type: none;
@@ -31,19 +23,55 @@ ul {
 
 li {
     float: left;
+    margin-left: 0.5%;
+    /* margin-top: 0.5%; */
+    margin-bottom: 0.5%;
 }
 
 li a {
     display: block;
-    color: #D2B55B;
+    color: #aaa;
     text-align: center;
-    padding: 14px 16px;
+    padding: 7.5px 16px;
     text-decoration: none;
+    border-top: 3px solid transparent;
+
+    /* Magnifying section */
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+.admin {
+    border-top: 3px solid #D2B55B;
+    color: #D2B55B;
+}
+
+.admin:hover {
+    border-top: 3px solid #D2B55B;
+    color: #D2B55B;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .1s ease-in-out;
+}
+
+li a b {
+    color: #D2B55B;
+    /* background-color: red; */
 }
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #D2B55B;
+    /* background-color: #111; */
+    color: #fff;
+    /* border-radius: 10px; */
+    border-top: 3px solid #D2B55B;
+
+    /* Magnifying section */
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 /*--------------- Search Bar ---------------*/
@@ -59,6 +87,7 @@ li a:hover {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     width: 250px;
+    background-color: #000;
 }
 
 .nav-bar .search-container button {
@@ -66,7 +95,7 @@ li a:hover {
     padding: 5.5px 12.5px;
     margin-top: 5%;
     margin-right: 16px;
-    background: #111;
+    background: #000;
     font-size: 17px;
     border: none;
     cursor: pointer;
@@ -79,8 +108,10 @@ li a:hover {
 }
 
 .nav-bar .search-container button:hover {
-    background: #ccc;
+    /* background: #ccc; */
+    color: #fff;
 }
+
 
 /*--------------- userstatus ---------------*/
 

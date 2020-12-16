@@ -181,3 +181,13 @@
     color: white;
     text-decoration: none;
 }
+
+
+
+
+.error-no-build {
+    text-align: center;
+    color: #fff;
+    margin-top: 20%;
+    font-size: 50px;
+}

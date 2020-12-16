@@ -1,46 +1,50 @@
-{% extends "base_site.html" %}
-
+<!------------------------------------ base site ---------------------------------------->
+{% extends 'base_site.html' %}
 {% block content %}
-  <form action="" method="post">
+<!------------------------------------------------------------------------------------->
+{% load static %}
+<link rel="stylesheet" href="{% static 'noxusProject/create_build_style.css' %}">
+<!------------------------------------------------------------------------------------->
+  <form class="build" action="" method="post">
     {% csrf_token %}
     <table>
-    {{ form.build_name.label }}
-    {{ form.build_name }}
-    {{ form.champion.label }}
-    {{ form.champion }}
-    {{ form.starter1.label }}
-    {{ form.starter1 }}
-    {{ form.starter2.label }}
-    {{ form.starter2 }}
-    {{ form.items_1.label }}
-    {{ form.items_1 }}
-    {{ form.items_2.label }}
-    {{ form.items_2 }}
-    {{ form.items_3.label }}
-    {{ form.items_3 }}
-    {{ form.items_4.label }}
-    {{ form.items_4 }}
-    {{ form.items_5.label }}
-    {{ form.items_5 }}
-    {{ form.items_6.label }}
-    {{ form.items_6 }}
-    {{ form.spell1.label }}
-    {{ form.spell1 }}
-    {{ form.spell2.label }}
-    {{ form.spell2 }}
-    {{ form.key_stone.label }}
-    {{ form.key_stone }}
-    {{ form.row1.label }}
-    {{ form.row1 }}
-    {{ form.row2.label }}
-    {{ form.row2 }}
-    {{ form.row3.label }}
-    {{ form.row3 }}
-    {{ form.sub_row1.label }}
-    {{ form.sub_row1 }}
-    {{ form.sub_row2.label }}
-    {{ form.sub_row2 }}
+      <div class="build-name">{{ form.build_name.label }}</div>
+      <div class="build-name">{{ form.build_name }}</div>
+      <div class="build-name">{{ form.champion.label }}</div>
+      <div class="build-name">{{ form.champion }}</div>
+      <div class="build-name">{{ form.starter1.label }}</div>
+      <div class="build-name">{{ form.starter1 }}</div>
+      <div class="build-name">{{ form.starter2.label }}</div>
+      <div class="build-name">{{ form.starter2 }}</div>
+      <div class="build-name">{{ form.items_1.label }}</div>
+      <div class="build-name">{{ form.items_1 }}</div>
+      <div class="build-name">{{ form.items_2.label }}</div>
+      <div class="build-name">{{ form.items_2 }}</div>
+      <div class="build-name">{{ form.items_3.label }}</div>
+      <div class="build-name">{{ form.items_3 }}</div>
+      <div class="build-name">{{ form.items_4.label }}</div>
+      <div class="build-name">{{ form.items_4 }}</div>
+      <div class="build-name">{{ form.items_5.label }}</div>
+      <div class="build-name">{{ form.items_5 }}</div>
+      <div class="build-name">{{ form.items_6.label }}</div>
+      <div class="build-name">{{ form.items_6 }}</div>
+      <div class="build-name">{{ form.spell1.label }}</div>
+      <div class="build-name">{{ form.spell1 }}</div>
+      <div class="build-name">{{ form.spell2.label }}</div>
+      <div class="build-name">{{ form.spell2 }}</div>
+      <div class="build-name">{{ form.key_stone.label }}</div>
+      <div class="build-name">{{ form.key_stone }}</div>
+      <div class="build-name">{{ form.row1.label }}</div>
+      <div class="build-name">{{ form.row1 }}</div>
+      <div class="build-name">{{ form.row2.label }}</div>
+      <div class="build-name">{{ form.row2 }}</div>
+      <div class="build-name">{{ form.row3.label }}</div>
+      <div class="build-name">{{ form.row3 }}</div>
+      <div class="build-name">{{ form.sub_row1.label }}</div>
+      <div class="build-name">{{ form.sub_row1 }}</div>
+      <div class="build-name">{{ form.sub_row2.label }}</div>
+      <div class="build-name"><a>{{ form.sub_row2 }}</a></div>
     </table>
-    <input type="submit" value="Submit">
+    <input class="button" type="submit" value="Submit">
   </form>
 {% endblock %}
