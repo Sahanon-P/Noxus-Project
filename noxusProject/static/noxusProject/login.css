@@ -1,0 +1,68 @@
+.login {
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.login h1 {
+    font-size: 40px;
+    color: white;
+    border-bottom: 3px solid #D2B55B;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+.textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 16px 0;
+    border-bottom: 1px solid #D2B55B;
+}
+.textbox input {
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 10px;
+}
+.textbox i {
+    color: white;
+    width: 26px;
+    float: left;
+    text-align: center;
+}
+.btn {
+    background: none;
+    border-style: none;
+    color: #D2B55B;
+    font-size: 20px;
+    cursor: pointer;
+    padding-top:10px;
+    padding-bottom: 20px;
+}
+.signup_link {
+    color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+}
+.signup_link a {
+    color: #D2B55B;
+    text-decoration: none;
+}
+.signup_link a:hover {
+    text-decoration: underline;
+}
+
+#messages {
+    color: white;
+}

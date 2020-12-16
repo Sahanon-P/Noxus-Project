@@ -96,50 +96,50 @@
     box-shadow: 0 0 10px 1px #111 inset;
 }
 
-/* .square_icon:hover {
+.buttons-user {
+    margin-top: 20%;
     
-    box-shadow: 0 0 5px 5px black inset;
-} */
+    /* text-align: center; */
+    
+    display: inline;
+    /* background-color: #D2B55B; */
+}
 
-/*--------------- hover ---------------*/
-/* .hover {
-    visibility: hidden;
-    width: 150px;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    bottom: 30%;
-    margin-left: -75px;
-    font-size: 15px;
-}
-.hover::after {
-    content: " ";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-}
-.square_icon:hover .hover {
-    visibility: visible;
-} */
-/* .button {
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 5px 5px black inset;
-    color: white;
-    padding: 5px 75px;
-    text-align: center;
-    font-size: 20px;
+.btn {
+    margin-top: 20px;
     margin-left: 15%;
-    font-family: Georgia, serif;
-    border: none;
-    text-decoration: none;
 }
-.button:hover {
-    background-color: rgb(75, 0, 0);
-} */
+
+.buttons-user a{
+    text-decoration: none;
+    background-color: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 20px;
+    color: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+}
+
+
+.delete {
+    margin-top: 10%;
+    text-align: center;
+    color: white;
+}
+
+.cancel-btn {
+    color: #fff;
+}
+
+.cancel {
+    margin: 5%;
+}
+
+.cancel a{
+    text-decoration: none;
+    margin: 5%;
+}

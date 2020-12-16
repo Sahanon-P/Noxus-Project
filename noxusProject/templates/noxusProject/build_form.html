@@ -3,12 +3,12 @@
 {% block content %}
 <!------------------------------------------------------------------------------------->
 {% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/create_build_style.css' %}">
+<link rel="stylesheet" href="{% static 'noxusProject/build_form_style.css' %}">
 <!------------------------------------------------------------------------------------->
   <form class="build" action="" method="post">
     {% csrf_token %}
     <table>
-      <div class="build-name">{{ form.build_name.label }}</div>
+      <div class="build-name"><a>{{ form.build_name.label }}</a></div>
       <div class="build-name">{{ form.build_name }}</div>
       <div class="build-name">{{ form.champion.label }}</div>
       <div class="build-name">{{ form.champion }}</div>

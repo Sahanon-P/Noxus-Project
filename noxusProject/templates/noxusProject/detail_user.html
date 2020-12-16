@@ -3,7 +3,7 @@
 {% block content %}
 <!------------------------------------ load stylesheet ---------------------------------------->
 {% load static %}
-<link rel="stylesheet" href="{% static 'noxusProject/detail.css' %}">
+<link rel="stylesheet" href="{% static 'noxusProject/detailx.css' %}">
 
 
 <!------------------------------------ contents ----------------------------------------------->
@@ -64,7 +64,12 @@
   </div>
 </div>
 <!------------------------------------ return btn --------------------------------------------->
-<a href="{% url 'my_build' %}" class="button">{{"Return"}}</a>
+<div class="buttons-user">
+  <div class="btn">
+    <a href="{{champion.id}}/update">Update</a>
+    <a href="{{champion.id}}/delete">Delete</a>
+  </div>
+</div>
 <!------------------------------------ base site ---------------------------------------------->
 {% endblock %}  
 <!--------------------------------------------------------------------------------------------->

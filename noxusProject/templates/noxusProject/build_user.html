@@ -10,13 +10,13 @@
   <!-- make the for loop of django -->
   {%for b in build %}
     <div class="box">
-        <a href="{{b.build_name}}"><div class="picture" style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{b.champion.name}}_0.jpg)"></div></a>
-        <a href="{{b.build_name}}"><div class="text">{{b.build_name}}</div></a>
+        <a href="{{b.id}}"><div class="picture" style="background-image: url(http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{b.champion.name}}_0.jpg)"></div></a>
+        <a href="{{b.id}}"><div class="text">{{b.build_name}}</div></a>
     </div>
    {%endfor%}
 </div>
 {%else%}
-<div class="error-no-build" href="{%url 'build_create' %}">Create Your Build First Idiot!</div>
+<div class="error-no-build" href="{%url 'build_create' %}">Please create your build +</div>
 {%endif%}
 <!------------------------------------ base site ---------------------------------------->
 {% endblock %}  
