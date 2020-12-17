@@ -151,9 +151,9 @@ def my_build(request):
     else:
         return redirect('index')
     
-def detail_build(request,name):
+def detail_build(request,pk):
     if request.user.is_authenticated:
-        champion = Build.objects.get(build_name = name)
+        champion = Build.objects.get(id = pk)
         context = {'champion': champion}
         return HttpResponse(render(request,'noxusProject/detail_user.html',context))
     else:
