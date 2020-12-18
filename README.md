@@ -8,6 +8,10 @@
 
 <https://noxus-project.herokuapp.com>
 
+## Presentation Slide
+
+<https://docs.google.com/presentation/d/13BXmRzCO3oR9-PiBP_5-3mOJYe4R8qJtxO14-HctiS0/edit?usp=sharing>
+
 ## Description 
              
    - A web-application providing analytical insights of the game “League of Legends” such as win rates, most played builds and most used characters presented in a way of data visualization to make users be able easily understand the complex in-game data and utilize the information they gained to make somewhat beneficial decisions in their gameplays whether they be pro-players or beginners.
